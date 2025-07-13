@@ -1,13 +1,14 @@
 "use client"
 
-import type { ComponentProps, ReactNode } from "react"
+import { useContext, type ComponentProps, type ReactNode } from "react"
 
 import { cn } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
-import { Card } from "../../ui/card"
+import type { Card as DefaultCard } from "../../ui/card"
 import type { UserAvatarClassNames } from "../../user-avatar"
 import { SettingsCardFooter } from "./settings-card-footer"
 import { SettingsCardHeader } from "./settings-card-header"
+import { AuthUIContext } from "../../../lib/auth-ui-provider"
 
 export type SettingsCardClassNames = {
     base?: string
@@ -38,7 +39,7 @@ export type SettingsCardClassNames = {
 }
 
 export interface SettingsCardProps
-    extends Omit<ComponentProps<typeof Card>, "title"> {
+    extends Omit<ComponentProps<typeof DefaultCard>, "title"> {
     children?: ReactNode
     className?: string
     classNames?: SettingsCardClassNames
@@ -71,6 +72,10 @@ export function SettingsCard({
     action,
     ...props
 }: SettingsCardProps) {
+    const {
+        components: { Card }
+    } = useContext(AuthUIContext)
+
     return (
         <Card
             className={cn(

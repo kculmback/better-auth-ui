@@ -5,7 +5,6 @@ import { useContext } from "react"
 import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
-import { Skeleton } from "../ui/skeleton"
 import {
     OrganizationLogo,
     type OrganizationLogoClassNames
@@ -50,7 +49,10 @@ export function OrganizationView({
     organization,
     localization: propLocalization
 }: OrganizationViewProps) {
-    const { localization: contextLocalization } = useContext(AuthUIContext)
+    const {
+        components: { Skeleton },
+        localization: contextLocalization
+    } = useContext(AuthUIContext)
 
     const localization = { ...contextLocalization, ...propLocalization }
 

@@ -21,17 +21,6 @@ import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { PasswordValidation } from "../../../types/password-validation"
 import { Captcha } from "../../captcha/captcha"
 import { PasswordInput } from "../../password-input"
-import { Button } from "../../ui/button"
-import { Checkbox } from "../../ui/checkbox"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
-import { Input } from "../../ui/input"
 import type { AuthFormClassNames } from "../auth-form"
 
 export interface SignInFormProps {
@@ -59,6 +48,17 @@ export function SignInForm({
     const {
         authClient,
         basePath,
+        components: {
+            Button,
+            Checkbox,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input
+        },
         credentials,
         localization: contextLocalization,
         viewPaths,
@@ -182,7 +182,9 @@ export function SignInForm({
 
                             <FormControl>
                                 <Input
-                                    autoComplete={usernameEnabled ? "username" : "email"}
+                                    autoComplete={
+                                        usernameEnabled ? "username" : "email"
+                                    }
                                     className={classNames?.input}
                                     type={usernameEnabled ? "text" : "email"}
                                     placeholder={

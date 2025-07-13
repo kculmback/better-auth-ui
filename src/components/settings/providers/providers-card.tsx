@@ -7,7 +7,6 @@ import { socialProviders } from "../../../lib/social-providers"
 import { cn } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { Refetch } from "../../../types/refetch"
-import { CardContent } from "../../ui/card"
 import { SettingsCard } from "../shared/settings-card"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 import { SettingsCellSkeleton } from "../skeletons/settings-cell-skeleton"
@@ -33,6 +32,7 @@ export function ProvidersCard({
     refetch
 }: ProvidersCardProps) {
     const {
+        components: { CardContent },
         hooks: { useListAccounts },
         localization: contextLocalization,
         social,

@@ -6,18 +6,11 @@ import { type ComponentProps, useContext, useState } from "react"
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
-import { Button } from "../../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../../ui/dialog"
+import type { Dialog as DefaultDialog } from "../../ui/dialog"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 
-interface APIKeyDisplayDialogProps extends ComponentProps<typeof Dialog> {
+interface APIKeyDisplayDialogProps
+    extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
     apiKey: string
@@ -30,7 +23,19 @@ export function APIKeyDisplayDialog({
     onOpenChange,
     ...props
 }: APIKeyDisplayDialogProps) {
-    const { localization: contextLocalization } = useContext(AuthUIContext)
+    const {
+        components: {
+            Button,
+            Card,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle
+        },
+        localization: contextLocalization
+    } = useContext(AuthUIContext)
     localization = { ...contextLocalization, ...localization }
 
     const [copied, setCopied] = useState(false)

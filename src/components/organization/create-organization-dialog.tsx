@@ -12,34 +12,11 @@ import { fileToBase64, resizeAndCropImage } from "../../lib/image-utils"
 import { cn, getLocalizedError } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../ui/dialog"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "../ui/dropdown-menu"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../ui/form"
-import { Input } from "../ui/input"
+import type { Dialog as DefaultDialog } from "../ui/dialog"
 import { OrganizationLogo } from "./organization-logo"
 
 export interface CreateOrganizationDialogProps
-    extends ComponentProps<typeof Dialog> {
+    extends ComponentProps<typeof DefaultDialog> {
     className?: string
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
@@ -54,6 +31,26 @@ export function CreateOrganizationDialog({
 }: CreateOrganizationDialogProps) {
     const {
         authClient,
+        components: {
+            Button,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuTrigger,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input
+        },
         hooks: { useActiveOrganization, useListOrganizations },
         localization: contextLocalization,
         organization,

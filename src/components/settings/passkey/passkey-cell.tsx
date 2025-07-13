@@ -6,8 +6,6 @@ import { useContext, useState } from "react"
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
-import { Button } from "../../ui/button"
-import { Card } from "../../ui/card"
 import { SessionFreshnessDialog } from "../shared/session-freshness-dialog"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 
@@ -25,6 +23,7 @@ export function PasskeyCell({
     passkey
 }: PasskeyCellProps) {
     const {
+        components: { Button, Card },
         freshAge,
         hooks: { useSession, useListPasskeys },
         localization: contextLocalization,

@@ -9,18 +9,11 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../ui/dialog"
+import type { Dialog as DefaultDialog } from "../ui/dialog"
 import { MemberCell } from "./member-cell"
 
-export interface RemoveMemberDialogProps extends ComponentProps<typeof Dialog> {
+export interface RemoveMemberDialogProps
+    extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
     member: Member & { user: Partial<User> }
@@ -35,6 +28,15 @@ export function RemoveMemberDialog({
 }: RemoveMemberDialogProps) {
     const {
         authClient,
+        components: {
+            Button,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle
+        },
         hooks: { useActiveOrganization },
         localization: contextLocalization,
         toast,

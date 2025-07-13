@@ -1,20 +1,24 @@
 "use client"
 
 import { EyeIcon, EyeOffIcon } from "lucide-react"
-import { type ComponentProps, useState } from "react"
+import { type ComponentProps, useContext, useState } from "react"
 
 import { cn } from "../lib/utils"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
+import type { Input as DefaultInput } from "./ui/input"
+import { AuthUIContext } from "../lib/auth-ui-provider"
 
 export function PasswordInput({
     className,
     enableToggle,
     onChange,
     ...props
-}: ComponentProps<typeof Input> & { enableToggle?: boolean }) {
+}: ComponentProps<typeof DefaultInput> & { enableToggle?: boolean }) {
     const [disabled, setDisabled] = useState(true)
     const [isVisible, setIsVisible] = useState(false)
+
+    const {
+        components: { Button, Input }
+    } = useContext(AuthUIContext)
 
     return (
         <div className="relative">

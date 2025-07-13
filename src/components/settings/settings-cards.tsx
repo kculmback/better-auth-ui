@@ -11,15 +11,6 @@ import { OrganizationInvitationsCard } from "../organization/organization-invita
 import { OrganizationMembersCard } from "../organization/organization-members-card"
 import { OrganizationSettingsCards } from "../organization/organization-settings-cards"
 import { OrganizationsCard } from "../organization/organizations-card"
-import { Button } from "../ui/button"
-import {
-    Drawer,
-    DrawerContent,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger
-} from "../ui/drawer"
-import { Label } from "../ui/label"
 import { AccountSettingsCards } from "./account-settings-cards"
 import { APIKeysCard } from "./api-key/api-keys-card"
 import { SecuritySettingsCards } from "./security-settings-cards"
@@ -79,6 +70,15 @@ export function SettingsCards({
     const {
         apiKey,
         basePath,
+        components: {
+            Button,
+            Drawer,
+            DrawerContent,
+            DrawerHeader,
+            DrawerTitle,
+            DrawerTrigger,
+            Label
+        },
         localization: contextLocalization,
         organization,
         settings,

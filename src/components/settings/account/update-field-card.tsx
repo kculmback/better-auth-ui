@@ -9,18 +9,6 @@ import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { FieldType } from "../../../types/additional-fields"
-import { CardContent } from "../../ui/card"
-import { Checkbox } from "../../ui/checkbox"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
-import { Input } from "../../ui/input"
-import { Skeleton } from "../../ui/skeleton"
 import {
     SettingsCard,
     type SettingsCardClassNames
@@ -56,6 +44,18 @@ export function UpdateFieldCard({
     validate
 }: UpdateFieldCardProps) {
     const {
+        components: {
+            CardContent,
+            Checkbox,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input,
+            Skeleton
+        },
         hooks: { useSession },
         mutators: { updateUser },
         localization: contextLocalization,

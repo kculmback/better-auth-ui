@@ -23,23 +23,6 @@ import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { PasswordValidation } from "../../../types/password-validation"
 import { Captcha } from "../../captcha/captcha"
 import { PasswordInput } from "../../password-input"
-import { Button } from "../../ui/button"
-import { Checkbox } from "../../ui/checkbox"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "../../ui/dropdown-menu"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
-import { Input } from "../../ui/input"
 import { UserAvatar } from "../../user-avatar"
 import type { AuthFormClassNames } from "../auth-form"
 
@@ -72,6 +55,21 @@ export function SignUpForm({
         authClient,
         basePath,
         baseURL,
+        components: {
+            Button,
+            Checkbox,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuTrigger,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input
+        },
         credentials,
         emailVerification,
         localization: contextLocalization,

@@ -10,17 +10,11 @@ import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
 import { SettingsCardFooter } from "../settings/shared/settings-card-footer"
 import { SettingsCardHeader } from "../settings/shared/settings-card-header"
-import { Button } from "../ui/button"
-import { Card } from "../ui/card"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "../ui/dropdown-menu"
+import type { Card as DefaultCard } from "../ui/card"
 import { OrganizationLogo } from "./organization-logo"
 
-export interface OrganizationLogoCardProps extends ComponentProps<typeof Card> {
+export interface OrganizationLogoCardProps
+    extends ComponentProps<typeof DefaultCard> {
     className?: string
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
@@ -33,6 +27,7 @@ export function OrganizationLogoCard({
     ...props
 }: OrganizationLogoCardProps) {
     const {
+        components: { Button, Card },
         hooks: { useActiveOrganization },
         localization: authLocalization
     } = useContext(AuthUIContext)
@@ -105,6 +100,14 @@ function OrganizationLogoForm({
 }: OrganizationLogoCardProps) {
     const {
         authClient,
+        components: {
+            Button,
+            Card,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuTrigger
+        },
         hooks: {
             useActiveOrganization,
             useListOrganizations,

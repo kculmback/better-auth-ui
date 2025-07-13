@@ -25,14 +25,7 @@ import { cn } from "../lib/utils"
 import type { AuthLocalization } from "../localization/auth-localization"
 import type { AnyAuthClient } from "../types/any-auth-client"
 import type { User } from "../types/auth-client"
-import { Button } from "./ui/button"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger
-} from "./ui/dropdown-menu"
+import type { Button as DefaultButton } from "./ui/button"
 import { UserAvatar, type UserAvatarClassNames } from "./user-avatar"
 import { UserView, type UserViewClassNames } from "./user-view"
 
@@ -93,9 +86,17 @@ export function UserButton({
     localization: propLocalization,
     size,
     ...props
-}: UserButtonProps & ComponentProps<typeof Button>) {
+}: UserButtonProps & ComponentProps<typeof DefaultButton>) {
     const {
         basePath,
+        components: {
+            Button,
+            DropdownMenu,
+            DropdownMenuTrigger,
+            DropdownMenuContent,
+            DropdownMenuSeparator,
+            DropdownMenuItem
+        },
         hooks: { useSession, useListDeviceSessions },
         mutators: { setActiveSession },
         localization: contextLocalization,

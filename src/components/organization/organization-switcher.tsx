@@ -21,14 +21,7 @@ import { getLocalizedError } from "../../lib/utils"
 import { cn } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { User } from "../../types/auth-client"
-import { Button } from "../ui/button"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger
-} from "../ui/dropdown-menu"
+import type { Button as DefaultButton } from "../ui/button"
 import { UserAvatar, type UserAvatarClassNames } from "../user-avatar"
 import type { UserViewClassNames } from "../user-view"
 import { CreateOrganizationDialog } from "./create-organization-dialog"
@@ -60,7 +53,7 @@ export interface OrganizationSwitcherClassNames {
 }
 
 export interface OrganizationSwitcherProps
-    extends Omit<ComponentProps<typeof Button>, "trigger"> {
+    extends Omit<ComponentProps<typeof DefaultButton>, "trigger"> {
     classNames?: OrganizationSwitcherClassNames
     align?: "center" | "start" | "end"
     trigger?: ReactNode
@@ -99,6 +92,14 @@ export function OrganizationSwitcher({
     const {
         authClient,
         basePath,
+        components: {
+            Button,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuSeparator,
+            DropdownMenuTrigger
+        },
         hooks: { useActiveOrganization, useSession, useListOrganizations },
         localization: contextLocalization,
         settings,

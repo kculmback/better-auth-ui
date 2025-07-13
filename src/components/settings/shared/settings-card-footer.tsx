@@ -1,12 +1,11 @@
 "use client"
 
-import type { ReactNode } from "react"
+import { useContext, type ReactNode } from "react"
 
 import { cn } from "../../../lib/utils"
-import { CardDescription, CardFooter } from "../../ui/card"
-import { Skeleton } from "../../ui/skeleton"
 import { SettingsActionButton } from "./settings-action-button"
 import type { SettingsCardClassNames } from "./settings-card"
+import { AuthUIContext } from "../../../lib/auth-ui-provider"
 
 export interface SettingsCardFooterProps {
     className?: string
@@ -32,6 +31,10 @@ export function SettingsCardFooter({
     variant,
     action
 }: SettingsCardFooterProps) {
+    const {
+        components: { CardDescription, CardFooter, Skeleton }
+    } = useContext(AuthUIContext)
+
     return (
         <CardFooter
             className={cn(

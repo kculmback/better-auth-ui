@@ -9,19 +9,10 @@ import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { ApiKey } from "../../../types/api-key"
 import type { Refetch } from "../../../types/refetch"
-import { Button } from "../../ui/button"
-import { Card } from "../../ui/card"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../../ui/dialog"
+import type { Dialog as DefaultDialog } from "../../ui/dialog"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 
-interface ApiKeyDeleteDialogProps extends ComponentProps<typeof Dialog> {
+interface ApiKeyDeleteDialogProps extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     apiKey: ApiKey
     localization?: AuthLocalization
@@ -37,6 +28,16 @@ export function ApiKeyDeleteDialog({
     ...props
 }: ApiKeyDeleteDialogProps) {
     const {
+        components: {
+            Button,
+            Card,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle
+        },
         localization: contextLocalization,
         mutators: { deleteApiKey },
         toast

@@ -14,18 +14,6 @@ import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError, getSearchParam } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { User } from "../../../types/auth-client"
-import { Button } from "../../ui/button"
-import { Checkbox } from "../../ui/checkbox"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
-import { InputOTP } from "../../ui/input-otp"
-import { Label } from "../../ui/label"
 import type { AuthFormClassNames } from "../auth-form"
 import { OTPInputGroup } from "../otp-input-group"
 
@@ -55,6 +43,18 @@ export function TwoFactorForm({
     const {
         authClient,
         basePath,
+        components: {
+            Button,
+            Checkbox,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            InputOTP,
+            Label
+        },
         hooks: { useSession },
         localization: contextLocalization,
         twoFactor,

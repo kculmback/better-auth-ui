@@ -10,15 +10,6 @@ import { cn, getLocalizedError, getPasswordSchema } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { PasswordValidation } from "../../../types/password-validation"
 import { PasswordInput } from "../../password-input"
-import { CardContent } from "../../ui/card"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
 import {
     SettingsCard,
     type SettingsCardClassNames
@@ -48,6 +39,15 @@ export function ChangePasswordCard({
         authClient,
         basePath,
         baseURL,
+        components: {
+            CardContent,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage
+        },
         credentials,
         hooks: { useSession, useListAccounts },
         localization: contextLocalization,

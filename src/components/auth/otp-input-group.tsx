@@ -1,12 +1,17 @@
 "use client"
 
-import { InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "../ui/input-otp"
+import { useContext } from "react"
+import { AuthUIContext } from "../../lib/auth-ui-provider"
 
 export function OTPInputGroup({
     otpSeparators = 0
 }: {
     otpSeparators?: 0 | 1 | 2
 }) {
+    const {
+        components: { InputOTPGroup, InputOTPSeparator, InputOTPSlot }
+    } = useContext(AuthUIContext)
+
     if (otpSeparators === 0) {
         return (
             <InputOTPGroup>

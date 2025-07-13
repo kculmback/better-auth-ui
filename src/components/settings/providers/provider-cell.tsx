@@ -9,8 +9,6 @@ import type { Provider } from "../../../lib/social-providers"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { Refetch } from "../../../types/refetch"
-import { Button } from "../../ui/button"
-import { Card } from "../../ui/card"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 
 export interface ProviderCellProps {
@@ -37,6 +35,7 @@ export function ProviderCell({
         authClient,
         basePath,
         baseURL,
+        components: { Button, Card },
         localization: contextLocalization,
         mutators: { unlinkAccount },
         viewPaths,

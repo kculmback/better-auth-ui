@@ -7,20 +7,14 @@ import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { fileToBase64, resizeAndCropImage } from "../../../lib/image-utils"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
-import { Button } from "../../ui/button"
-import { Card } from "../../ui/card"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "../../ui/dropdown-menu"
+import type { Card as DefaultCard } from "../../ui/card"
 import { UserAvatar } from "../../user-avatar"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 import { SettingsCardFooter } from "../shared/settings-card-footer"
 import { SettingsCardHeader } from "../shared/settings-card-header"
 
-export interface UpdateAvatarCardProps extends ComponentProps<typeof Card> {
+export interface UpdateAvatarCardProps
+    extends ComponentProps<typeof DefaultCard> {
     className?: string
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
@@ -33,6 +27,14 @@ export function UpdateAvatarCard({
     ...props
 }: UpdateAvatarCardProps) {
     const {
+        components: {
+            Button,
+            Card,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuTrigger
+        },
         hooks: { useSession },
         mutators: { updateUser },
         localization: authLocalization,

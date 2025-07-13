@@ -11,34 +11,10 @@ import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { Refetch } from "../../../types/refetch"
-import { Button } from "../../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../../ui/dialog"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
-import { Input } from "../../ui/input"
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue
-} from "../../ui/select"
+import type { Dialog as DefaultDialog } from "../../ui/dialog"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 
-interface CreateAPIKeyDialogProps extends ComponentProps<typeof Dialog> {
+interface CreateAPIKeyDialogProps extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
     onSuccess: (key: string) => void
@@ -56,6 +32,27 @@ export function CreateAPIKeyDialog({
     const {
         authClient,
         apiKey,
+        components: {
+            Button,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input,
+            Select,
+            SelectContent,
+            SelectItem,
+            SelectTrigger,
+            SelectValue
+        },
         localization: contextLocalization,
         toast
     } = useContext(AuthUIContext)

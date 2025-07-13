@@ -1,14 +1,16 @@
 "use client"
 
 import { Loader2 } from "lucide-react"
-import type { ComponentProps, ReactNode } from "react"
+import { useContext, type ComponentProps, type ReactNode } from "react"
 import { useFormState } from "react-hook-form"
 
 import { cn } from "../../../lib/utils"
-import { Button } from "../../ui/button"
+import type { Button as DefaultButton } from "../../ui/button"
 import type { SettingsCardClassNames } from "./settings-card"
+import { AuthUIContext } from "../../../lib/auth-ui-provider"
 
-interface SettingsActionButtonProps extends ComponentProps<typeof Button> {
+interface SettingsActionButtonProps
+    extends ComponentProps<typeof DefaultButton> {
     classNames?: SettingsCardClassNames
     actionLabel: ReactNode
     disabled?: boolean
@@ -24,6 +26,10 @@ export function SettingsActionButton({
     onClick,
     ...props
 }: SettingsActionButtonProps) {
+    const {
+        components: { Button }
+    } = useContext(AuthUIContext)
+
     if (!onClick) {
         const formState = useFormState()
         isSubmitting = formState.isSubmitting

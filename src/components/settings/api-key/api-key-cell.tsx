@@ -9,8 +9,6 @@ import { cn } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { ApiKey } from "../../../types/api-key"
 import type { Refetch } from "../../../types/refetch"
-import { Button } from "../../ui/button"
-import { Card } from "../../ui/card"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 import { ApiKeyDeleteDialog } from "./api-key-delete-dialog"
 
@@ -29,7 +27,10 @@ export function APIKeyCell({
     localization,
     refetch
 }: APIKeyCellProps) {
-    const { localization: contextLocalization } = useContext(AuthUIContext)
+    const {
+        components: { Button, Card },
+        localization: contextLocalization
+    } = useContext(AuthUIContext)
     localization = { ...contextLocalization, ...localization }
 
     const { lang } = useLang()

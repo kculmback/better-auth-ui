@@ -9,14 +9,6 @@ import { getLocalizedError } from "../../../lib/utils"
 import { cn } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { Refetch } from "../../../types/refetch"
-import { Button } from "../../ui/button"
-import { Card } from "../../ui/card"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "../../ui/dropdown-menu"
 import { UserView } from "../../user-view"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 
@@ -37,6 +29,14 @@ export function AccountCell({
 }: AccountCellProps) {
     const {
         basePath,
+        components: {
+            Button,
+            Card,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuTrigger
+        },
         localization: contextLocalization,
         hooks: { useSession },
         mutators: { revokeDeviceSession, setActiveSession },

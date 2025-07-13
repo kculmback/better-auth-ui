@@ -6,7 +6,6 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn } from "../../lib/utils"
 import { SettingsCard } from "../settings/shared/settings-card"
 import type { SettingsCardProps } from "../settings/shared/settings-card"
-import { CardContent } from "../ui/card"
 import { CreateOrganizationDialog } from "./create-organization-dialog"
 import { OrganizationCell } from "./organization-cell"
 
@@ -17,6 +16,7 @@ export function OrganizationsCard({
     ...props
 }: SettingsCardProps) {
     const {
+        components: { CardContent },
         hooks: { useListOrganizations },
         localization: contextLocalization
     } = useContext(AuthUIContext)

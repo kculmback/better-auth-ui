@@ -16,16 +16,6 @@ import {
     type SettingsView,
     settingsViews
 } from "../settings/settings-cards"
-import { Button } from "../ui/button"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle
-} from "../ui/card"
-import { Separator } from "../ui/separator"
 import { AuthCallback } from "./auth-callback"
 import { AuthForm, type AuthFormClassNames } from "./auth-form"
 import { EmailOTPButton } from "./email-otp-button"
@@ -91,6 +81,16 @@ export function AuthCard({
 
     const {
         basePath,
+        components: {
+            Button,
+            Card,
+            CardContent,
+            CardDescription,
+            CardFooter,
+            CardHeader,
+            CardTitle,
+            Separator
+        },
         credentials,
         localization: contextLocalization,
         magicLink,

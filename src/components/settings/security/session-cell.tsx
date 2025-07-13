@@ -8,8 +8,6 @@ import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { Refetch } from "../../../types/refetch"
-import { Button } from "../../ui/button"
-import { Card } from "../../ui/card"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 
 export interface SessionCellProps {
@@ -29,6 +27,7 @@ export function SessionCell({
 }: SessionCellProps) {
     const {
         basePath,
+        components: { Button, Card },
         hooks: { useSession },
         localization: contextLocalization,
         mutators: { revokeSession },

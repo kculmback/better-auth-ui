@@ -6,7 +6,6 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn } from "../../lib/utils"
 import { SettingsCard } from "../settings/shared/settings-card"
 import type { SettingsCardProps } from "../settings/shared/settings-card"
-import { CardContent } from "../ui/card"
 import { InviteMemberDialog } from "./invite-member-dialog"
 import { MemberCell } from "./member-cell"
 
@@ -18,6 +17,7 @@ export function InviteMemberCard({
 }: SettingsCardProps) {
     const {
         authClient,
+        components: { CardContent },
         hooks: { useActiveOrganization },
         localization: contextLocalization
     } = useContext(AuthUIContext)

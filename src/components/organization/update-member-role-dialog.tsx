@@ -9,26 +9,11 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../ui/dialog"
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue
-} from "../ui/select"
+import type { Dialog as DefaultDialog } from "../ui/dialog"
 import { MemberCell } from "./member-cell"
 
 export interface UpdateMemberRoleDialogProps
-    extends ComponentProps<typeof Dialog> {
+    extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
     member: Member & { user: Partial<User> }
@@ -43,6 +28,20 @@ export function UpdateMemberRoleDialog({
 }: UpdateMemberRoleDialogProps) {
     const {
         authClient,
+        components: {
+            Button,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle,
+            Select,
+            SelectContent,
+            SelectItem,
+            SelectTrigger,
+            SelectValue
+        },
         hooks: { useActiveOrganization, useSession },
         localization: contextLocalization,
         organization,

@@ -9,20 +9,11 @@ import { getLocalizedError } from "../../lib/utils"
 import { cn } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import { Card } from "../ui/card"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../ui/dialog"
+import type { Dialog as DefaultDialog } from "../ui/dialog"
 import { OrganizationView } from "./organization-view"
 
 export interface LeaveOrganizationDialogProps
-    extends ComponentProps<typeof Dialog> {
+    extends ComponentProps<typeof DefaultDialog> {
     className?: string
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
@@ -39,6 +30,16 @@ export function LeaveOrganizationDialog({
 }: LeaveOrganizationDialogProps) {
     const {
         authClient,
+        components: {
+            Button,
+            Card,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle
+        },
         hooks: { useActiveOrganization, useListOrganizations },
         localization: contextLocalization,
         toast

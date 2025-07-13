@@ -8,15 +8,6 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn, getLocalizedError, getSearchParam } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle
-} from "../ui/card"
-import { Skeleton } from "../ui/skeleton"
 import { OrganizationView } from "./organization-view"
 
 export interface AcceptInvitationCardProps {
@@ -92,6 +83,14 @@ function AcceptInvitationContent({
 }: AcceptInvitationCardProps & { invitationId: string }) {
     const {
         authClient,
+        components: {
+            Button,
+            Card,
+            CardContent,
+            CardDescription,
+            CardHeader,
+            CardTitle
+        },
         localization: contextLocalization,
         toast,
         redirectTo,
@@ -322,6 +321,10 @@ const AcceptInvitationSkeleton = ({
     classNames,
     localization
 }: AcceptInvitationCardProps) => {
+    const {
+        components: { Card, CardContent, CardHeader, Skeleton }
+    } = useContext(AuthUIContext)
+
     return (
         <Card className={cn("w-full max-w-sm", className, classNames?.base)}>
             <CardHeader

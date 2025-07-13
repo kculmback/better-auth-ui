@@ -11,15 +11,6 @@ import { cn, getLocalizedError, getPasswordSchema } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import type { PasswordValidation } from "../../../types/password-validation"
 import { PasswordInput } from "../../password-input"
-import { Button } from "../../ui/button"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
 import type { AuthFormClassNames } from "../auth-form"
 
 export interface ResetPasswordFormProps {
@@ -40,6 +31,15 @@ export function ResetPasswordForm({
     const {
         authClient,
         basePath,
+        components: {
+            Button,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage
+        },
         credentials,
         localization: contextLocalization,
         viewPaths,

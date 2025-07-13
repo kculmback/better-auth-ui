@@ -1,13 +1,17 @@
 "use client"
 
+import { useContext } from "react"
 import { cn } from "../../../lib/utils"
-import { Card } from "../../ui/card"
-import { Skeleton } from "../../ui/skeleton"
 import type { SettingsCardClassNames } from "../shared/settings-card"
+import { AuthUIContext } from "../../../lib/auth-ui-provider"
 
 export function SettingsCellSkeleton({
     classNames
 }: { classNames?: SettingsCardClassNames }) {
+    const {
+        components: { Card, Skeleton }
+    } = useContext(AuthUIContext)
+
     return (
         <Card
             className={cn(

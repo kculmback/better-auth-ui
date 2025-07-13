@@ -10,29 +10,11 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import { Card } from "../ui/card"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../ui/dialog"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../ui/form"
-import { Input } from "../ui/input"
+import type { Dialog as DefaultDialog } from "../ui/dialog"
 import { OrganizationView } from "./organization-view"
 
 export interface DeleteOrganizationDialogProps
-    extends ComponentProps<typeof Dialog> {
+    extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
 }
@@ -45,6 +27,23 @@ export function DeleteOrganizationDialog({
 }: DeleteOrganizationDialogProps) {
     const {
         authClient,
+        components: {
+            Button,
+            Card,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input
+        },
         hooks: { useActiveOrganization, useListOrganizations },
         localization: contextLocalization,
         redirectTo,

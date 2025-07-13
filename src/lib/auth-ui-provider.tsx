@@ -41,6 +41,8 @@ import type { SocialOptions } from "../types/social-options"
 import { type AuthViewPaths, authViewPaths } from "./auth-view-paths"
 import type { Provider } from "./social-providers"
 import { getLocalizedError, getSearchParam } from "./utils"
+import type { Components } from "../components/ui/default-components"
+import { defaultComponents } from "../components/ui/default-components"
 
 const DefaultLink: Link = ({ href, className, children }) => (
     <a className={className} href={href}>
@@ -85,6 +87,11 @@ export type AuthUIContextType = {
               metadata?: Record<string, unknown>
           }
         | boolean
+    /**
+     * Shadcn components to be used by package
+     * @default Components
+     */
+    components: Components
     /**
      * Avatar configuration
      * @default undefined
@@ -225,6 +232,11 @@ export type AuthUIProviderProps = {
      * @remarks `AuthClient`
      */
     authClient: AnyAuthClient
+    /**
+     * Provide your own components to override the default shadcn components included in this package
+     * @default undefined
+     */
+    components?: Partial<Components>
     /**
      * Avatar configuration
      * @default undefined
@@ -367,6 +379,7 @@ export const AuthUIContext = createContext<AuthUIContextType>(
 export const AuthUIProvider = ({
     children,
     authClient: authClientProp,
+    components: componentsProp,
     avatar: avatarProp,
     settings: settingsProp,
     settingsFields,
@@ -516,6 +529,14 @@ export const AuthUIProvider = ({
     ])
 
     const authClient = authClientProp as AuthClient
+
+    const components = useMemo(
+        () => ({
+            ...defaultComponents,
+            componentsProp
+        }),
+        [componentsProp]
+    )
 
     const avatar = useMemo<AvatarOptions | undefined>(() => {
         if (!avatarProp) return
@@ -798,6 +819,7 @@ export const AuthUIProvider = ({
         <AuthUIContext.Provider
             value={{
                 authClient,
+                components,
                 avatar,
                 basePath: basePath === "/" ? "" : basePath,
                 baseURL,

@@ -1,11 +1,10 @@
 "use client"
 
-import type { ReactNode } from "react"
+import { useContext, type ReactNode } from "react"
 
 import { cn } from "../../../lib/utils"
-import { CardDescription, CardHeader, CardTitle } from "../../ui/card"
-import { Skeleton } from "../../ui/skeleton"
 import type { SettingsCardClassNames } from "./settings-card"
+import { AuthUIContext } from "../../../lib/auth-ui-provider"
 
 export interface SettingsCardHeaderProps {
     className?: string
@@ -22,6 +21,10 @@ export function SettingsCardHeader({
     isPending,
     title
 }: SettingsCardHeaderProps) {
+    const {
+        components: { CardDescription, CardHeader, CardTitle, Skeleton }
+    } = useContext(AuthUIContext)
+
     return (
         <CardHeader className={cn(classNames?.header, className)}>
             {isPending ? (

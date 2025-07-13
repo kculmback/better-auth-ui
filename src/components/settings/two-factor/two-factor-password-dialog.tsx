@@ -9,27 +9,12 @@ import * as z from "zod"
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import { PasswordInput } from "../../password-input"
-import { Button } from "../../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../../ui/dialog"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
+import type { Dialog as DefaultDialog } from "../../ui/dialog"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 import { BackupCodesDialog } from "./backup-codes-dialog"
 
-interface TwoFactorPasswordDialogProps extends ComponentProps<typeof Dialog> {
+interface TwoFactorPasswordDialogProps
+    extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     isTwoFactorEnabled: boolean
 }
@@ -44,6 +29,21 @@ export function TwoFactorPasswordDialog({
         localization,
         authClient,
         basePath,
+        components: {
+            Button,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage
+        },
         viewPaths,
         navigate,
         toast,

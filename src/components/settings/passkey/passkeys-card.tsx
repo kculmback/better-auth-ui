@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form"
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
-import { CardContent } from "../../ui/card"
 import { Form } from "../../ui/form"
 import { SessionFreshnessDialog } from "../shared/session-freshness-dialog"
 import { SettingsCard } from "../shared/settings-card"
@@ -26,6 +25,7 @@ export function PasskeysCard({
 }: PasskeysCardProps) {
     const {
         authClient,
+        components: { CardContent },
         freshAge,
         hooks: { useListPasskeys, useSession },
         localization: authLocalization,

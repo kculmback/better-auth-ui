@@ -5,7 +5,8 @@ import { useFormState } from "react-hook-form"
 
 import { cn } from "../lib/utils"
 import type { AuthFormClassNames } from "./auth/auth-form"
-import { Alert, AlertDescription, AlertTitle } from "./ui/alert"
+import { AuthUIContext } from "../lib/auth-ui-provider"
+import { useContext } from "react"
 
 export interface FormErrorProps {
     title?: string
@@ -14,6 +15,8 @@ export interface FormErrorProps {
 
 export function FormError({ title, classNames }: FormErrorProps) {
     const { errors } = useFormState()
+
+    const { components: { Alert, AlertTitle, AlertDescription } } = useContext(AuthUIContext)
 
     if (!errors.root?.message) return null
 

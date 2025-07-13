@@ -10,33 +10,9 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../ui/dialog"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../ui/form"
-import { Input } from "../ui/input"
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue
-} from "../ui/select"
-
-export interface InviteMemberDialogProps extends ComponentProps<typeof Dialog> {
+import type { Dialog as DefaultDialog } from "../ui/dialog"
+export interface InviteMemberDialogProps
+    extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
 }
@@ -49,6 +25,27 @@ export function InviteMemberDialog({
 }: InviteMemberDialogProps) {
     const {
         authClient,
+        components: {
+            Button,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input,
+            Select,
+            SelectContent,
+            SelectItem,
+            SelectTrigger,
+            SelectValue
+        },
         hooks: { useActiveOrganization, useSession },
         localization: contextLocalization,
         toast,

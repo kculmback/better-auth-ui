@@ -5,7 +5,6 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import type { Provider } from "../../lib/social-providers"
 import { cn, getLocalizedError, getSearchParam } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
-import { Button } from "../ui/button"
 import type { AuthCardClassNames } from "./auth-card"
 
 interface ProviderButtonProps {
@@ -37,6 +36,7 @@ export function ProviderButton({
         authClient,
         basePath,
         baseURL,
+        components: { Button },
         persistClient,
         redirectTo: contextRedirectTo,
         viewPaths,

@@ -11,17 +11,7 @@ import { useOnSuccessTransition } from "../../../hooks/use-success-transition"
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
-import { Button } from "../../ui/button"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
-import { Input } from "../../ui/input"
-import { InputOTP } from "../../ui/input-otp"
+
 import type { AuthFormClassNames } from "../auth-form"
 import { OTPInputGroup } from "../otp-input-group"
 
@@ -60,6 +50,16 @@ function EmailForm({
 
     const {
         authClient,
+        components: {
+            Button,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input
+        },
         localization: contextLocalization,
         toast
     } = useContext(AuthUIContext)
@@ -177,6 +177,16 @@ export function OTPForm({
 }) {
     const {
         authClient,
+        components: {
+            Button,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            InputOTP
+        },
         localization: contextLocalization,
         toast
     } = useContext(AuthUIContext)

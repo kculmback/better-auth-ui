@@ -8,14 +8,6 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import { Card } from "../ui/card"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "../ui/dropdown-menu"
 import { LeaveOrganizationDialog } from "./leave-organization-dialog"
 import { OrganizationView } from "./organization-view"
 
@@ -35,6 +27,14 @@ export function OrganizationCell({
     const {
         authClient,
         basePath,
+        components: {
+            Button,
+            Card,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuTrigger
+        },
         hooks: { useActiveOrganization },
         localization: contextLocalization,
         settings,

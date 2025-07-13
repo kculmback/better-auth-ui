@@ -5,7 +5,6 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import type { AuthView } from "../../lib/auth-view-paths"
 import { cn } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
-import { Button } from "../ui/button"
 import type { AuthCardClassNames } from "./auth-card"
 
 interface EmailOTPButtonProps {
@@ -21,7 +20,12 @@ export function EmailOTPButton({
     localization,
     view
 }: EmailOTPButtonProps) {
-    const { viewPaths, navigate, basePath } = useContext(AuthUIContext)
+    const {
+        components: { Button },
+        viewPaths,
+        navigate,
+        basePath
+    } = useContext(AuthUIContext)
 
     return (
         <Button

@@ -9,8 +9,7 @@ import { getGravatarUrl } from "../lib/gravatar-utils"
 import { cn } from "../lib/utils"
 import type { AuthLocalization } from "../localization/auth-localization"
 import type { Profile } from "../types/profile"
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
-import { Skeleton } from "./ui/skeleton"
+import type { Avatar as DefaultAvatar } from "./ui/avatar"
 
 export interface UserAvatarClassNames {
     base?: string
@@ -48,9 +47,12 @@ export function UserAvatar({
     user,
     localization: propLocalization,
     ...props
-}: UserAvatarProps & ComponentProps<typeof Avatar>) {
-    const { localization: contextLocalization, gravatar } =
-        useContext(AuthUIContext)
+}: UserAvatarProps & ComponentProps<typeof DefaultAvatar>) {
+    const {
+        localization: contextLocalization,
+        gravatar,
+        components: { Avatar, AvatarFallback, AvatarImage, Skeleton }
+    } = useContext(AuthUIContext)
 
     const localization = { ...contextLocalization, ...propLocalization }
 

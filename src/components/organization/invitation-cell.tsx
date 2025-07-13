@@ -8,14 +8,6 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import { Card } from "../ui/card"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "../ui/dropdown-menu"
 import { UserAvatar } from "../user-avatar"
 
 export interface InvitationCellProps {
@@ -33,6 +25,14 @@ export function InvitationCell({
 }: InvitationCellProps) {
     const {
         authClient,
+        components: {
+            Button,
+            Card,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuTrigger
+        },
         organization,
         hooks: { useActiveOrganization },
         localization: contextLocalization,

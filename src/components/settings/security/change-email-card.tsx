@@ -6,16 +6,6 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
-import { CardContent } from "../../ui/card"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormMessage
-} from "../../ui/form"
-import { Input } from "../../ui/input"
-import { Skeleton } from "../../ui/skeleton"
 import { SettingsCard } from "../shared/settings-card"
 import type { SettingsCardProps } from "../shared/settings-card"
 
@@ -27,6 +17,16 @@ export function ChangeEmailCard({
 }: SettingsCardProps) {
     const {
         authClient,
+        components: {
+            CardContent,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormMessage,
+            Input,
+            Skeleton
+        },
         emailVerification,
         hooks: { useSession },
         localization: contextLocalization,

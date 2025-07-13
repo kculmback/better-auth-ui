@@ -11,10 +11,6 @@ import {
     SettingsCard,
     type SettingsCardProps
 } from "../settings/shared/settings-card"
-import { CardContent } from "../ui/card"
-import { Form, FormControl, FormField, FormItem, FormMessage } from "../ui/form"
-import { Input } from "../ui/input"
-import { Skeleton } from "../ui/skeleton"
 
 export function OrganizationNameCard({
     className,
@@ -23,6 +19,7 @@ export function OrganizationNameCard({
     ...props
 }: SettingsCardProps) {
     const {
+        components: { CardContent, Skeleton },
         hooks: { useActiveOrganization },
         localization: contextLocalization
     } = useContext(AuthUIContext)
@@ -70,6 +67,16 @@ function OrganizationNameForm({
 }: SettingsCardProps) {
     const {
         authClient,
+        components: {
+            CardContent,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormMessage,
+            Input,
+            Skeleton
+        },
         localization: contextLocalization,
         hooks: {
             useActiveOrganization,

@@ -3,7 +3,6 @@
 import { useContext, useMemo } from "react"
 import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn } from "../../lib/utils"
-import { Skeleton } from "../ui/skeleton"
 import { UserAvatar } from "../user-avatar"
 import type { UserViewProps } from "../user-view"
 
@@ -25,7 +24,10 @@ export function PersonalAccountView({
     user,
     localization: propLocalization
 }: UserViewProps) {
-    const { localization: contextLocalization } = useContext(AuthUIContext)
+    const {
+        components: { Skeleton },
+        localization: contextLocalization
+    } = useContext(AuthUIContext)
 
     const localization = useMemo(
         () => ({ ...contextLocalization, ...propLocalization }),

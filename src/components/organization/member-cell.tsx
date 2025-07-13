@@ -9,14 +9,6 @@ import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
 import type { SettingsCardClassNames } from "../settings/shared/settings-card"
-import { Button } from "../ui/button"
-import { Card } from "../ui/card"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "../ui/dropdown-menu"
 import { UserView } from "../user-view"
 import { RemoveMemberDialog } from "./remove-member-dialog"
 import { UpdateMemberRoleDialog } from "./update-member-role-dialog"
@@ -37,6 +29,14 @@ export function MemberCell({
     hideActions
 }: MemberCellProps) {
     const {
+        components: {
+            Button,
+            Card,
+            DropdownMenu,
+            DropdownMenuContent,
+            DropdownMenuItem,
+            DropdownMenuTrigger
+        },
         organization,
         hooks: { useActiveOrganization, useSession },
         localization: contextLocalization

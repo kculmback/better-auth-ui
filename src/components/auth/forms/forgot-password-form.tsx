@@ -12,16 +12,6 @@ import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn, getLocalizedError } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
 import { Captcha } from "../../captcha/captcha"
-import { Button } from "../../ui/button"
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
-} from "../../ui/form"
-import { Input } from "../../ui/input"
 import type { AuthFormClassNames } from "../auth-form"
 
 export interface ForgotPasswordFormProps {
@@ -46,6 +36,16 @@ export function ForgotPasswordForm({
         authClient,
         basePath,
         baseURL,
+        components: {
+            Button,
+            Form,
+            FormControl,
+            FormField,
+            FormItem,
+            FormLabel,
+            FormMessage,
+            Input
+        },
         localization: contextLocalization,
         navigate,
         toast,

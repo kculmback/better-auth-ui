@@ -2,19 +2,11 @@ import { type ComponentProps, useContext } from "react"
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
-import { Button } from "../../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../../ui/dialog"
+import type { Dialog as DefaultDialog } from "../../ui/dialog"
 import type { SettingsCardClassNames } from "./settings-card"
 
 export interface SessionFreshnessDialogProps
-    extends ComponentProps<typeof Dialog> {
+    extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     localization?: AuthLocalization
     title?: string
@@ -31,6 +23,15 @@ export function SessionFreshnessDialog({
 }: SessionFreshnessDialogProps) {
     const {
         basePath,
+        components: {
+            Button,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle
+        },
         localization: contextLocalization,
         viewPaths,
         navigate

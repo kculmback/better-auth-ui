@@ -5,18 +5,10 @@ import { type ComponentProps, useContext, useState } from "react"
 
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn } from "../../../lib/utils"
-import { Button } from "../../ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
-} from "../../ui/dialog"
+import type { Dialog as DefaultDialog } from "../../ui/dialog"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 
-interface BackupCodesDialogProps extends ComponentProps<typeof Dialog> {
+interface BackupCodesDialogProps extends ComponentProps<typeof DefaultDialog> {
     classNames?: SettingsCardClassNames
     backupCodes: string[]
 }
@@ -27,7 +19,18 @@ export function BackupCodesDialog({
     onOpenChange,
     ...props
 }: BackupCodesDialogProps) {
-    const { localization } = useContext(AuthUIContext)
+    const {
+        components: {
+            Button,
+            Dialog,
+            DialogContent,
+            DialogDescription,
+            DialogFooter,
+            DialogHeader,
+            DialogTitle
+        },
+        localization
+    } = useContext(AuthUIContext)
     const [copied, setCopied] = useState(false)
 
     const handleCopy = () => {

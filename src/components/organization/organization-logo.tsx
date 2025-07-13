@@ -8,8 +8,7 @@ import { useContext } from "react"
 import { AuthUIContext } from "../../lib/auth-ui-provider"
 import { cn } from "../../lib/utils"
 import type { AuthLocalization } from "../../localization/auth-localization"
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
-import { Skeleton } from "../ui/skeleton"
+import type { Avatar as DefaultAvatar } from "../ui/avatar"
 
 export interface OrganizationLogoClassNames {
     base?: string
@@ -46,8 +45,11 @@ export function OrganizationLogo({
     organization,
     localization: propLocalization,
     ...props
-}: OrganizationLogoProps & ComponentProps<typeof Avatar>) {
-    const { localization: contextLocalization } = useContext(AuthUIContext)
+}: OrganizationLogoProps & ComponentProps<typeof DefaultAvatar>) {
+    const {
+        components: { Avatar, AvatarFallback, AvatarImage, Skeleton },
+        localization: contextLocalization
+    } = useContext(AuthUIContext)
 
     const localization = { ...contextLocalization, ...propLocalization }
 

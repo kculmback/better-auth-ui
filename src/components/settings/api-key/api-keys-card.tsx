@@ -3,7 +3,6 @@
 import { useContext, useState } from "react"
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn } from "../../../lib/utils"
-import { CardContent } from "../../ui/card"
 import { SettingsCard } from "../shared/settings-card"
 import type { SettingsCardProps } from "../shared/settings-card"
 import { APIKeyCell } from "./api-key-cell"
@@ -17,6 +16,7 @@ export function APIKeysCard({
     ...props
 }: SettingsCardProps) {
     const {
+        components: { CardContent },
         hooks: { useListApiKeys },
         localization: contextLocalization
     } = useContext(AuthUIContext)

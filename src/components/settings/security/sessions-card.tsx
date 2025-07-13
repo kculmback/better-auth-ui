@@ -1,10 +1,10 @@
 "use client"
+
 import { useContext } from "react"
 
 import { AuthUIContext } from "../../../lib/auth-ui-provider"
 import { cn } from "../../../lib/utils"
 import type { AuthLocalization } from "../../../localization/auth-localization"
-import { CardContent } from "../../ui/card"
 import { SettingsCard } from "../shared/settings-card"
 import type { SettingsCardClassNames } from "../shared/settings-card"
 import { SettingsCellSkeleton } from "../skeletons/settings-cell-skeleton"
@@ -22,6 +22,7 @@ export function SessionsCard({
     localization
 }: SessionsCardProps) {
     const {
+        components: { CardContent },
         hooks: { useListSessions },
         localization: contextLocalization
     } = useContext(AuthUIContext)

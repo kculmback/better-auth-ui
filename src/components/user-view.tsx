@@ -5,7 +5,6 @@ import { AuthUIContext } from "../lib/auth-ui-provider"
 import { cn } from "../lib/utils"
 import type { AuthLocalization } from "../localization/auth-localization"
 import type { Profile } from "../types/profile"
-import { Skeleton } from "./ui/skeleton"
 import { UserAvatar, type UserAvatarClassNames } from "./user-avatar"
 
 export interface UserViewClassNames {
@@ -47,7 +46,10 @@ export function UserView({
     user,
     localization: propLocalization
 }: UserViewProps) {
-    const { localization: contextLocalization } = useContext(AuthUIContext)
+    const {
+        localization: contextLocalization,
+        components: { Skeleton }
+    } = useContext(AuthUIContext)
 
     const localization = useMemo(
         () => ({ ...contextLocalization, ...propLocalization }),
