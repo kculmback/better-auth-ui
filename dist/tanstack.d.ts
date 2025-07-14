@@ -1,0 +1,31 @@
+import * as react_jsx_runtime from 'react/jsx-runtime';
+import { A as AuthUIProviderProps } from './auth-ui-provider-BBabq3Tm.js';
+import 'react';
+import 'better-auth/social-providers';
+import './auth-hooks-DL8c3_Dy.js';
+import '@better-fetch/fetch';
+import 'better-auth/plugins/organization';
+import 'better-auth/react';
+import 'better-auth/client/plugins';
+import 'better-auth';
+import 'better-auth/plugins/passkey';
+import './auth-mutators-CK8vxOJz.js';
+import './auth-view-paths-Ctk94WJ-.js';
+import 'react-hook-form';
+import 'class-variance-authority/types';
+import 'class-variance-authority';
+import '@radix-ui/react-avatar';
+import '@radix-ui/react-checkbox';
+import '@radix-ui/react-dialog';
+import 'vaul';
+import '@radix-ui/react-dropdown-menu';
+import '@radix-ui/react-label';
+import '@radix-ui/react-slot';
+import 'input-otp';
+import '@radix-ui/react-select';
+import '@radix-ui/react-separator';
+import '@radix-ui/react-tabs';
+
+declare function AuthUIProviderTanstack({ children, authClient, hooks: hooksProp, mutators: mutatorsProp, onSessionChange: onSessionChangeProp, ...props }: AuthUIProviderProps): react_jsx_runtime.JSX.Element;
+
+export { AuthUIProviderTanstack };
