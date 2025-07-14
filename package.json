@@ -1,5 +1,5 @@
 {
-    "name": "@daveyplate/better-auth-ui",
+    "name": "@kculmback/better-auth-ui",
     "homepage": "https://better-auth-ui.com",
     "version": "2.0.12",
     "description": "Plug & play shadcn/ui components for better-auth",
