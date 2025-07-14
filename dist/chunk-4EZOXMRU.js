@@ -2348,7 +2348,7 @@ var AuthUIProvider = ({
   const components = useMemo(
     () => ({
       ...defaultComponents,
-      componentsProp
+      ...componentsProp
     }),
     [componentsProp]
   );

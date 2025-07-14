@@ -2348,7 +2348,7 @@ var AuthUIProvider = ({
   const components = _react.useMemo.call(void 0, 
     () => ({
       ...defaultComponents,
-      componentsProp
+      ...componentsProp
     }),
     [componentsProp]
   );

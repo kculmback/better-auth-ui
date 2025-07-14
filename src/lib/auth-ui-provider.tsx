@@ -531,9 +531,9 @@ export const AuthUIProvider = ({
     const authClient = authClientProp as AuthClient
 
     const components = useMemo(
-        () => ({
+        (): Components => ({
             ...defaultComponents,
-            componentsProp
+            ...componentsProp
         }),
         [componentsProp]
     )

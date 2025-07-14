@@ -1,6 +1,6 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true});
 
-var _chunkEPB3TET6cjs = require('./chunk-EPB3TET6.cjs');
+var _chunkZE6BT3OYcjs = require('./chunk-ZE6BT3OY.cjs');
 require('./chunk-QB6CPTMT.cjs');
 
 // src/lib/tanstack/auth-ui-provider-tanstack.tsx
@@ -138,7 +138,7 @@ function AuthUIProviderTanstack({
     await (onSessionChangeProp == null ? void 0 : onSessionChangeProp());
   }, [onSessionChangeProp, onSessionChange]);
   return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
-    _chunkEPB3TET6cjs.AuthUIProvider,
+    _chunkZE6BT3OYcjs.AuthUIProvider,
     {
       authClient,
       hooks,

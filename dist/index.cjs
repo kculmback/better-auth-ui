@@ -13,7 +13,7 @@ var _chunkJOLFGV3Ucjs = require('./chunk-JOLFGV3U.cjs');
 
 
 
-var _chunkEPB3TET6cjs = require('./chunk-EPB3TET6.cjs');
+var _chunkZE6BT3OYcjs = require('./chunk-ZE6BT3OY.cjs');
 
 
 
@@ -39,7 +39,7 @@ var _react = require('react');
 function useOnSuccessTransition({
   redirectTo: redirectToProp
 }) {
-  const { redirectTo: contextRedirectTo } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  const { redirectTo: contextRedirectTo } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const getRedirectTo = _react.useCallback.call(void 0, 
     () => redirectToProp || _chunkQB6CPTMTcjs.getSearchParam.call(void 0, "redirectTo") || contextRedirectTo,
     [redirectToProp, contextRedirectTo]
@@ -50,7 +50,7 @@ function useOnSuccessTransition({
     navigate,
     hooks: { useSession },
     onSessionChange
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const { refetch: refetchSession } = useSession();
   _react.useEffect.call(void 0, () => {
     if (!success || isPending) return;
@@ -72,7 +72,7 @@ function AuthCallback({ redirectTo }) {
   const {
     hooks: { useIsRestoring },
     persistClient
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const isRestoring = useIsRestoring == null ? void 0 : useIsRestoring();
   const isRedirecting = _react.useRef.call(void 0, false);
   const { onSuccess } = useOnSuccessTransition({ redirectTo });
@@ -601,7 +601,7 @@ function useAuthenticate(options) {
     basePath,
     viewPaths,
     replace
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const { data, isPending, error, refetch } = useSession();
   const sessionData = data;
   _react.useEffect.call(void 0, () => {
@@ -646,7 +646,7 @@ function OrganizationLogo({
   const {
     components: { Avatar, AvatarFallback, AvatarImage, Skeleton },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...propLocalization };
   const name = organization == null ? void 0 : organization.name;
   const src = organization == null ? void 0 : organization.logo;
@@ -714,7 +714,7 @@ function OrganizationView({
   const {
     components: { Skeleton },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...propLocalization };
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
     "div",
@@ -810,7 +810,7 @@ function AcceptInvitationCard({
     toast,
     redirectTo,
     replace
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = _react.useMemo.call(void 0, 
     () => ({ ...contextLocalization, ...localizationProp }),
     [contextLocalization, localizationProp]
@@ -872,7 +872,7 @@ function AcceptInvitationContent({
     replace,
     organization,
     hooks: { useInvitation }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = _react.useMemo.call(void 0, 
     () => ({ ...contextLocalization, ...localizationProp }),
     [contextLocalization, localizationProp]
@@ -1066,7 +1066,7 @@ var AcceptInvitationSkeleton = ({
 }) => {
   const {
     components: { Card, CardContent, CardHeader, Skeleton }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, Card, { className: _chunkQB6CPTMTcjs.cn.call(void 0, "w-full max-w-sm", className, classNames == null ? void 0 : classNames.base), children: [
     /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
       CardHeader,
@@ -1145,7 +1145,7 @@ function SettingsActionButton({
 }) {
   const {
     components: { Button }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   if (!onClick) {
     const formState = _reacthookform.useFormState.call(void 0, );
     isSubmitting = formState.isSubmitting;
@@ -1188,7 +1188,7 @@ function SettingsCardFooter({
 }) {
   const {
     components: { CardDescription, CardFooter, Skeleton }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
     CardFooter,
     {
@@ -1257,7 +1257,7 @@ function SettingsCardHeader({
 }) {
   const {
     components: { CardDescription, CardHeader, CardTitle, Skeleton }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, CardHeader, { className: _chunkQB6CPTMTcjs.cn.call(void 0, classNames == null ? void 0 : classNames.header, className), children: isPending ? /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _jsxruntime.Fragment, { children: [
     /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
       Skeleton,
@@ -1318,7 +1318,7 @@ function SettingsCard({
 }) {
   const {
     components: { Card }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
     Card,
     {
@@ -1415,7 +1415,7 @@ function UserAvatar({
     localization: contextLocalization,
     gravatar,
     components: { Avatar, AvatarFallback, AvatarImage, Skeleton }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...propLocalization };
   const name = (user == null ? void 0 : user.displayUsername) || (user == null ? void 0 : user.username) || (user == null ? void 0 : user.displayName) || (user == null ? void 0 : user.firstName) || (user == null ? void 0 : user.name) || (user == null ? void 0 : user.fullName) || (user == null ? void 0 : user.email);
   const userImage = (user == null ? void 0 : user.image) || (user == null ? void 0 : user.avatar) || (user == null ? void 0 : user.avatarUrl);
@@ -1501,7 +1501,7 @@ function InvitationCell({
     hooks: { useActiveOrganization },
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const [isLoading, setIsLoading] = _react.useState.call(void 0, false);
   const { refetch } = useActiveOrganization();
@@ -1612,7 +1612,7 @@ function OrganizationInvitationsCard({
     components: { CardContent },
     hooks: { useActiveOrganization },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: activeOrganization } = useActiveOrganization();
   const invitations = activeOrganization == null ? void 0 : activeOrganization.invitations;
@@ -1687,7 +1687,7 @@ function InviteMemberDialog({
     localization: contextLocalization,
     toast,
     organization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: activeOrganization, refetch: refetchActiveOrganization } = useActiveOrganization();
   const { data: sessionData } = useSession();
@@ -1870,7 +1870,7 @@ function UserView({
   const {
     localization: contextLocalization,
     components: { Skeleton }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = _react.useMemo.call(void 0, 
     () => ({ ...contextLocalization, ...propLocalization }),
     [contextLocalization, propLocalization]
@@ -1983,7 +1983,7 @@ function RemoveMemberDialog({
     localization: contextLocalization,
     toast,
     organization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { refetch } = useActiveOrganization();
   const builtInRoles = [
@@ -2122,7 +2122,7 @@ function UpdateMemberRoleDialog({
     localization: contextLocalization,
     organization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { refetch } = useActiveOrganization();
   const { data: sessionData } = useSession();
@@ -2291,7 +2291,7 @@ function MemberCell({
     organization,
     hooks: { useActiveOrganization, useSession },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: sessionData } = useSession();
   const { data: activeOrganization } = useActiveOrganization();
@@ -2417,7 +2417,7 @@ function OrganizationMembersCard({
     settings,
     replace,
     viewPaths
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const {
     data: activeOrganization,
@@ -2472,7 +2472,7 @@ function OrganizationMembersContent({
     components: { CardContent },
     hooks: { useActiveOrganization, useHasPermission },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: activeOrganization } = useActiveOrganization();
   const { data: hasPermissionInvite, isPending: isPendingInvite } = useHasPermission({
@@ -2581,7 +2581,7 @@ function DeleteOrganizationDialog({
     redirectTo,
     navigate,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: activeOrganization, refetch: refetchActiveOrganization } = useActiveOrganization();
   const { refetch: refetchOrganizations } = useListOrganizations();
@@ -2736,7 +2736,7 @@ function DeleteOrganizationCard({
   const {
     hooks: { useActiveOrganization, useSession },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const [showDialog, setShowDialog] = _react.useState.call(void 0, false);
   const { data: activeOrganization, isPending: organizationPending } = useActiveOrganization();
@@ -2830,7 +2830,7 @@ function OrganizationLogoCard({
     components: { Button, Card },
     hooks: { useActiveOrganization },
     localization: authLocalization2
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...authLocalization2, ...localization };
   const { data: activeOrganization } = useActiveOrganization();
   if (!activeOrganization) {
@@ -2924,7 +2924,7 @@ function OrganizationLogoForm({
     optimistic,
     organization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...authLocalization2, ...localization };
   const { data: activeOrganization, refetch: refetchActiveOrganization } = useActiveOrganization();
   const { refetch: refetchOrganizations } = useListOrganizations();
@@ -3120,7 +3120,7 @@ function OrganizationNameCard({
     components: { CardContent, Skeleton },
     hooks: { useActiveOrganization },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: activeOrganization } = useActiveOrganization();
   if (!activeOrganization) {
@@ -3181,7 +3181,7 @@ function OrganizationNameForm({
     },
     optimistic,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: activeOrganization, refetch: refetchActiveOrganization } = useActiveOrganization();
   const { refetch: refetchOrganizations } = useListOrganizations();
@@ -3296,7 +3296,7 @@ function OrganizationSlugCard({
     components: { CardContent, Skeleton },
     hooks: { useActiveOrganization },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: activeOrganization } = useActiveOrganization();
   if (!activeOrganization) {
@@ -3357,7 +3357,7 @@ function OrganizationSlugForm({
     },
     optimistic,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: activeOrganization, refetch: refetchActiveOrganization } = useActiveOrganization();
   const { refetch: refetchOrganizations } = useListOrganizations();
@@ -3472,7 +3472,7 @@ function OrganizationSettingsCards({
     settings,
     replace,
     viewPaths
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const {
     data: activeOrganization,
     isPending: organizationPending,
@@ -3578,7 +3578,7 @@ function CreateOrganizationDialog({
     localization: contextLocalization,
     organization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const [logo, setLogo] = _react.useState.call(void 0, null);
   const [uploadingLogo, setUploadingLogo] = _react.useState.call(void 0, false);
@@ -3895,7 +3895,7 @@ function LeaveOrganizationDialog({
     hooks: { useActiveOrganization, useListOrganizations },
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...localizationProp };
   const { data: activeOrganization, refetch: refetchActiveOrganization } = useActiveOrganization();
   const { refetch: refetchOrganizations } = useListOrganizations();
@@ -4031,7 +4031,7 @@ function OrganizationCell({
     viewPaths,
     navigate,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = _react.useMemo.call(void 0, 
     () => ({ ...contextLocalization, ...localizationProp }),
     [contextLocalization, localizationProp]
@@ -4153,9 +4153,9 @@ function OrganizationsCard({
     components: { CardContent },
     hooks: { useListOrganizations },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
   const { data: organizations, isPending: organizationsPending } = useListOrganizations();
   const isPending = !isHydrated || organizationsPending;
   const [createDialogOpen, setCreateDialogOpen] = _react.useState.call(void 0, false);
@@ -4234,7 +4234,7 @@ function AccountCell({
     toast,
     viewPaths,
     navigate
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: sessionData } = useSession();
   const [isLoading, setIsLoading] = _react.useState.call(void 0, false);
@@ -4327,7 +4327,7 @@ function AccountsCard({
     localization: contextLocalization,
     viewPaths,
     navigate
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: deviceSessions, isPending, refetch } = useListDeviceSessions();
   return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
@@ -4380,7 +4380,7 @@ function UpdateAvatarCard({
     optimistic,
     avatar,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...authLocalization2, ...localization };
   const { data: sessionData, isPending, refetch } = useSession();
   const fileInputRef = _react.useRef.call(void 0, null);
@@ -4578,7 +4578,7 @@ function UpdateFieldCard({
     localization: contextLocalization,
     optimistic,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { isPending, refetch } = useSession();
   let fieldSchema = z6.unknown();
@@ -4731,7 +4731,7 @@ function UpdateNameCard({
     hooks: { useSession },
     localization: contextLocalization,
     nameRequired
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: sessionData } = useSession();
   return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
@@ -4765,7 +4765,7 @@ function UpdateUsernameCard({
   const {
     hooks: { useSession },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: sessionData } = useSession();
   const value = ((_a = sessionData == null ? void 0 : sessionData.user) == null ? void 0 : _a.displayUsername) || ((_b = sessionData == null ? void 0 : sessionData.user) == null ? void 0 : _b.username);
@@ -4815,7 +4815,7 @@ function ChangeEmailCard({
     hooks: { useSession },
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: sessionData, isPending, refetch } = useSession();
   const [resendDisabled, setResendDisabled] = _react.useState.call(void 0, false);
@@ -4972,7 +4972,7 @@ function AccountSettingsCards({
     hooks: { useSession },
     multiSession,
     settings
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const { data: sessionData } = useSession();
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
     "div",
@@ -5090,9 +5090,9 @@ function ApiKeyDeleteDialog({
     localization: contextLocalization,
     mutators: { deleteApiKey },
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
-  const { lang } = _chunkEPB3TET6cjs.useLang.call(void 0, );
+  const { lang } = _chunkZE6BT3OYcjs.useLang.call(void 0, );
   const [isLoading, setIsLoading] = _react.useState.call(void 0, false);
   const handleDelete = async () => {
     setIsLoading(true);
@@ -5221,9 +5221,9 @@ function APIKeyCell({
   const {
     components: { Button, Card },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
-  const { lang } = _chunkEPB3TET6cjs.useLang.call(void 0, );
+  const { lang } = _chunkZE6BT3OYcjs.useLang.call(void 0, );
   const [showDeleteDialog, setShowDeleteDialog] = _react.useState.call(void 0, false);
   const formatExpiration = () => {
     if (!apiKey.expiresAt) return localization.NEVER_EXPIRES;
@@ -5318,7 +5318,7 @@ function APIKeyDisplayDialog({
       DialogTitle
     },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const [copied, setCopied] = _react.useState.call(void 0, false);
   const handleCopy = () => {
@@ -5434,9 +5434,9 @@ function CreateAPIKeyDialog({
     },
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
-  const { lang } = _chunkEPB3TET6cjs.useLang.call(void 0, );
+  const { lang } = _chunkZE6BT3OYcjs.useLang.call(void 0, );
   const formSchema = z8.object({
     name: z8.string().min(1, `${localization.NAME} ${localization.IS_REQUIRED}`),
     expiresInDays: z8.string().optional()
@@ -5647,7 +5647,7 @@ function APIKeysCard({
     components: { CardContent },
     hooks: { useListApiKeys },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: apiKeys, isPending, refetch } = useListApiKeys();
   const [createDialogOpen, setCreateDialogOpen] = _react.useState.call(void 0, false);
@@ -5761,7 +5761,7 @@ function DeleteAccountDialog({
     viewPaths,
     navigate,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: sessionData } = useSession();
   const session = sessionData == null ? void 0 : sessionData.session;
@@ -5933,7 +5933,7 @@ function DeleteAccountCard({
   const {
     hooks: { useListAccounts },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const [showDialog, setShowDialog] = _react.useState.call(void 0, false);
   if (!skipHook) {
@@ -5998,7 +5998,7 @@ function SessionFreshnessDialog({
     localization: contextLocalization,
     viewPaths,
     navigate
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const handleSignOut = () => {
     navigate(`${basePath}/${viewPaths.SIGN_OUT}`);
@@ -6077,7 +6077,7 @@ function PasskeyCell({
     localization: contextLocalization,
     mutators: { deletePasskey },
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { refetch } = useListPasskeys();
   const { data: sessionData } = useSession();
@@ -6168,7 +6168,7 @@ function PasskeysCard({
     hooks: { useListPasskeys, useSession },
     localization: authLocalization2,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...authLocalization2, ...localization };
   const { data: passkeys, isPending, refetch } = useListPasskeys();
   const { data: sessionData } = useSession();
@@ -6203,7 +6203,7 @@ function PasskeysCard({
         localization
       }
     ),
-    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkEPB3TET6cjs.Form, { ...form, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "form", { onSubmit: form.handleSubmit(addPasskey), children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _chunkZE6BT3OYcjs.Form, { ...form, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "form", { onSubmit: form.handleSubmit(addPasskey), children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
       SettingsCard,
       {
         className,
@@ -6247,7 +6247,7 @@ function SettingsCellSkeleton({
 }) {
   const {
     components: { Card, Skeleton }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
     Card,
     {
@@ -6303,7 +6303,7 @@ function ProviderCell({
     mutators: { unlinkAccount },
     viewPaths,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const [isLoading, setIsLoading] = _react.useState.call(void 0, false);
   const handleLink = async () => {
@@ -6396,7 +6396,7 @@ function ProvidersCard({
     localization: contextLocalization,
     social,
     genericOAuth
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   if (!skipHook) {
     const result = useListAccounts();
@@ -6475,7 +6475,7 @@ function PasswordInput({
   const [isVisible, setIsVisible] = _react.useState.call(void 0, false);
   const {
     components: { Button, Input }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "relative", children: [
     /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
       Input,
@@ -6522,7 +6522,7 @@ function InputFieldSkeleton({
 }) {
   const {
     components: { Skeleton }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "flex flex-col gap-1.5", children: [
     /* @__PURE__ */ _jsxruntime.jsx.call(void 0, Skeleton, { className: _chunkQB6CPTMTcjs.cn.call(void 0, "h-4 w-32", classNames == null ? void 0 : classNames.skeleton) }),
     /* @__PURE__ */ _jsxruntime.jsx.call(void 0, Skeleton, { className: _chunkQB6CPTMTcjs.cn.call(void 0, "h-9 w-full", classNames == null ? void 0 : classNames.skeleton) })
@@ -6558,7 +6558,7 @@ function ChangePasswordCard({
     localization: contextLocalization,
     viewPaths,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const confirmPasswordEnabled = credentials == null ? void 0 : credentials.confirmPassword;
   const contextPasswordValidation = credentials == null ? void 0 : credentials.passwordValidation;
   localization = { ...contextLocalization, ...localization };
@@ -6816,7 +6816,7 @@ function SessionCell({
     viewPaths,
     navigate,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: sessionData } = useSession();
   const isCurrentSession = session.id === ((_a = sessionData == null ? void 0 : sessionData.session) == null ? void 0 : _a.id);
@@ -6892,7 +6892,7 @@ function SessionsCard({
     components: { CardContent },
     hooks: { useListSessions },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { data: sessions, isPending, refetch } = useListSessions();
   return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
@@ -6949,7 +6949,7 @@ function BackupCodesDialog({
       DialogTitle
     },
     localization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const [copied, setCopied] = _react.useState.call(void 0, false);
   const handleCopy = () => {
     const codeText = backupCodes.join("\n");
@@ -7062,7 +7062,7 @@ function TwoFactorPasswordDialog({
     navigate,
     toast,
     twoFactor
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const [showBackupCodesDialog, setShowBackupCodesDialog] = _react.useState.call(void 0, false);
   const [backupCodes, setBackupCodes] = _react.useState.call(void 0, []);
   const [totpURI, setTotpURI] = _react.useState.call(void 0, null);
@@ -7237,7 +7237,7 @@ function TwoFactorCard({
   const {
     localization: contextLocalization,
     hooks: { useSession }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const [showPasswordDialog, setShowPasswordDialog] = _react.useState.call(void 0, false);
   localization = { ...contextLocalization, ...localization };
   const { data: sessionData, isPending } = useSession();
@@ -7285,7 +7285,7 @@ function SecuritySettingsCards({
     social,
     genericOAuth,
     twoFactor
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { useListAccounts } = hooks;
   const {
@@ -7398,7 +7398,7 @@ function SettingsCards({
     settings,
     viewPaths,
     Link
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const path = pathname == null ? void 0 : pathname.split("/").pop();
   view = view || _chunkQB6CPTMTcjs.getAuthViewByPath.call(void 0, viewPaths, path) || "SETTINGS";
@@ -7610,7 +7610,7 @@ function OTPInputGroup({
 }) {
   const {
     components: { InputOTPGroup, InputOTPSeparator, InputOTPSlot }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   if (otpSeparators === 0) {
     return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, InputOTPGroup, { children: [
       /* @__PURE__ */ _jsxruntime.jsx.call(void 0, InputOTPSlot, { index: 0 }),
@@ -7671,7 +7671,7 @@ function EmailForm({
   setIsSubmitting,
   setEmail
 }) {
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
   const {
     authClient,
     components: {
@@ -7686,7 +7686,7 @@ function EmailForm({
     },
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const formSchema = z12.object({
     email: z12.string().min(1, {
@@ -7793,7 +7793,7 @@ function OTPForm({
     },
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { onSuccess, isPending: transitionPending } = useOnSuccessTransition({
     redirectTo
@@ -7913,7 +7913,7 @@ var sanitizeActionName = (action) => {
 function useCaptcha({
   localization
 }) {
-  const { captcha, localization: contextLocalization } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  const { captcha, localization: contextLocalization } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const captchaRef = _react.useRef.call(void 0, null);
   const { executeRecaptcha } = _reactrecaptchav3.useGoogleReCaptcha.call(void 0, );
@@ -7978,8 +7978,8 @@ function RecaptchaBadge({
   className,
   localization: propLocalization
 }) {
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
-  const { captcha, localization: contextLocalization } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
+  const { captcha, localization: contextLocalization } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = { ...contextLocalization, ...propLocalization };
   if (!captcha) return null;
   if (!captcha.hideBadge) {
@@ -8032,9 +8032,9 @@ var _reactgooglerecaptcha = require('react-google-recaptcha'); var _reactgoogler
 function RecaptchaV2({
   ref
 }) {
-  const { captcha } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
-  const { theme } = _chunkEPB3TET6cjs.useTheme.call(void 0, );
-  const { lang } = _chunkEPB3TET6cjs.useLang.call(void 0, );
+  const { captcha } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
+  const { theme } = _chunkZE6BT3OYcjs.useTheme.call(void 0, );
+  const { lang } = _chunkZE6BT3OYcjs.useLang.call(void 0, );
   _react.useEffect.call(void 0, () => {
     ;
     window.recaptchaOptions = {
@@ -8082,7 +8082,7 @@ var DEFAULT_CAPTCHA_ENDPOINTS2 = [
   "/forget-password"
 ];
 function Captcha({ ref, localization, action }) {
-  const { captcha } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  const { captcha } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   if (!captcha) return null;
   if (action) {
     const endpoints = captcha.endpoints || DEFAULT_CAPTCHA_ENDPOINTS2;
@@ -8090,7 +8090,7 @@ function Captcha({ ref, localization, action }) {
       return null;
     }
   }
-  const { theme } = _chunkEPB3TET6cjs.useTheme.call(void 0, );
+  const { theme } = _chunkZE6BT3OYcjs.useTheme.call(void 0, );
   const showRecaptchaV2 = captcha.provider === "google-recaptcha-v2-checkbox" || captcha.provider === "google-recaptcha-v2-invisible";
   const showRecaptchaBadge = captcha.provider === "google-recaptcha-v3" || captcha.provider === "google-recaptcha-v2-invisible";
   const showTurnstile = captcha.provider === "cloudflare-turnstile";
@@ -8130,7 +8130,7 @@ function ForgotPasswordForm({
   localization,
   setIsSubmitting
 }) {
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
   const { captchaRef, getCaptchaHeaders } = useCaptcha({ localization });
   const {
     authClient,
@@ -8150,7 +8150,7 @@ function ForgotPasswordForm({
     navigate,
     toast,
     viewPaths
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const formSchema = z13.object({
     email: z13.string().min(1, {
@@ -8264,7 +8264,7 @@ function MagicLinkForm({
   redirectTo: redirectToProp,
   setIsSubmitting
 }) {
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
   const { captchaRef, getCaptchaHeaders } = useCaptcha({ localization });
   const {
     authClient,
@@ -8285,7 +8285,7 @@ function MagicLinkForm({
     redirectTo: contextRedirectTo,
     viewPaths,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const getRedirectTo = _react.useCallback.call(void 0, 
     () => redirectToProp || _chunkQB6CPTMTcjs.getSearchParam.call(void 0, "redirectTo") || contextRedirectTo,
@@ -8425,7 +8425,7 @@ function RecoverAccountForm({
     },
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { onSuccess, isPending: transitionPending } = useOnSuccessTransition({
     redirectTo
@@ -8533,7 +8533,7 @@ function ResetPasswordForm({
     viewPaths,
     navigate,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const confirmPasswordEnabled = credentials == null ? void 0 : credentials.confirmPassword;
   const contextPasswordValidation = credentials == null ? void 0 : credentials.passwordValidation;
   localization = { ...contextLocalization, ...localization };
@@ -8684,7 +8684,7 @@ function SignInForm({
   setIsSubmitting,
   passwordValidation
 }) {
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
   const { captchaRef, getCaptchaHeaders } = useCaptcha({ localization });
   const {
     authClient,
@@ -8706,7 +8706,7 @@ function SignInForm({
     navigate,
     toast,
     Link
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const rememberMeEnabled = credentials == null ? void 0 : credentials.rememberMe;
   const usernameEnabled = credentials == null ? void 0 : credentials.username;
   const contextPasswordValidation = credentials == null ? void 0 : credentials.passwordValidation;
@@ -8908,7 +8908,7 @@ function SignUpForm({
   setIsSubmitting,
   passwordValidation
 }) {
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
   const { captchaRef, getCaptchaHeaders } = useCaptcha({ localization });
   const {
     additionalFields,
@@ -8941,7 +8941,7 @@ function SignUpForm({
     navigate,
     toast,
     avatar
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const confirmPasswordEnabled = credentials == null ? void 0 : credentials.confirmPassword;
   const usernameEnabled = credentials == null ? void 0 : credentials.username;
   const contextPasswordValidation = credentials == null ? void 0 : credentials.passwordValidation;
@@ -9494,7 +9494,7 @@ function TwoFactorForm({
   setIsSubmitting
 }) {
   var _a;
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
   const totpURI = isHydrated ? _chunkQB6CPTMTcjs.getSearchParam.call(void 0, "totpURI") : null;
   const initialSendRef = _react.useRef.call(void 0, false);
   const {
@@ -9518,7 +9518,7 @@ function TwoFactorForm({
     viewPaths,
     toast,
     Link
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { onSuccess, isPending: transitionPending } = useOnSuccessTransition({
     redirectTo
@@ -9786,7 +9786,7 @@ function TwoFactorForm({
 
 function SignOut() {
   const signingOut = _react.useRef.call(void 0, false);
-  const { authClient, basePath, viewPaths } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  const { authClient, basePath, viewPaths } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const { onSuccess } = useOnSuccessTransition({
     redirectTo: `${basePath}/${viewPaths.SIGN_IN}`
   });
@@ -9822,7 +9822,7 @@ function AuthForm({
     twoFactor: twoFactorEnabled,
     viewPaths,
     replace
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const signUpEnabled = !!signUp;
   localization = { ...contextLocalization, ...localization };
   const path = pathname == null ? void 0 : pathname.split("/").pop();
@@ -10016,7 +10016,7 @@ function EmailOTPButton({
     viewPaths,
     navigate,
     basePath
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
     Button,
     {
@@ -10058,7 +10058,7 @@ function MagicLinkButton({
     navigate,
     basePath,
     credentials
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
     Button,
     {
@@ -10090,7 +10090,7 @@ function OneTap({ localization, redirectTo }) {
     authClient,
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const oneTapFetched = _react.useRef.call(void 0, false);
   localization = _react.useMemo.call(void 0, 
     () => ({ ...contextLocalization, ...localization }),
@@ -10134,7 +10134,7 @@ function PasskeyButton({
     components: { Button },
     localization: contextLocalization,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   const { onSuccess } = useOnSuccessTransition({ redirectTo });
   const signInPassKey = async () => {
@@ -10214,7 +10214,7 @@ function ProviderButton({
     social,
     genericOAuth,
     toast
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const getRedirectTo = _react.useCallback.call(void 0, 
     () => redirectToProp || _chunkQB6CPTMTcjs.getSearchParam.call(void 0, "redirectTo") || contextRedirectTo,
     [redirectToProp, contextRedirectTo]
@@ -10307,7 +10307,7 @@ function AuthCard({
   otpSeparators = 0
 }) {
   var _a, _b, _c, _d, _e, _f;
-  const isHydrated = _chunkEPB3TET6cjs.useIsHydrated.call(void 0, );
+  const isHydrated = _chunkZE6BT3OYcjs.useIsHydrated.call(void 0, );
   const {
     basePath,
     components: {
@@ -10333,7 +10333,7 @@ function AuthCard({
     viewPaths,
     replace,
     Link
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   localization = { ...contextLocalization, ...localization };
   if (socialLayout === "auto") {
     socialLayout = !credentials ? "vertical" : (social == null ? void 0 : social.providers) && social.providers.length > 2 ? "horizontal" : "vertical";
@@ -10618,7 +10618,7 @@ function AuthCard({
 function AuthLoading({ children }) {
   const {
     hooks: { useSession }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const { isPending } = useSession();
   return isPending ? children : null;
 }
@@ -10652,7 +10652,7 @@ function PersonalAccountView({
   const {
     components: { Skeleton },
     localization: contextLocalization
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = _react.useMemo.call(void 0, 
     () => ({ ...contextLocalization, ...propLocalization }),
     [contextLocalization, propLocalization]
@@ -10769,7 +10769,7 @@ function OrganizationSwitcher({
     toast,
     viewPaths,
     Link
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = _react.useMemo.call(void 0, 
     () => ({ ...contextLocalization, ...localizationProp }),
     [contextLocalization, localizationProp]
@@ -11069,7 +11069,7 @@ function RedirectToSignUp() {
 function SignedIn({ children }) {
   const {
     hooks: { useSession }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const { data } = useSession();
   return data ? children : null;
 }
@@ -11079,7 +11079,7 @@ function SignedIn({ children }) {
 function SignedOut({ children }) {
   const {
     hooks: { useSession }
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const { data, isPending } = useSession();
   return !data && !isPending ? children : null;
 }
@@ -11135,7 +11135,7 @@ function UserButton({
     viewPaths,
     onSessionChange,
     Link
-  } = _react.useContext.call(void 0, _chunkEPB3TET6cjs.AuthUIContext);
+  } = _react.useContext.call(void 0, _chunkZE6BT3OYcjs.AuthUIContext);
   const localization = _react.useMemo.call(void 0, 
     () => ({ ...contextLocalization, ...propLocalization }),
     [contextLocalization, propLocalization]
@@ -11474,4 +11474,4 @@ function UserButton({
 
 
 
-exports.APIKeysCard = APIKeysCard; exports.AcceptInvitationCard = AcceptInvitationCard; exports.AccountSettingsCards = AccountSettingsCards; exports.AccountsCard = AccountsCard; exports.AppleIcon = AppleIcon; exports.AuthCallback = AuthCallback; exports.AuthCard = AuthCard; exports.AuthForm = AuthForm; exports.AuthLoading = AuthLoading; exports.AuthUIContext = _chunkEPB3TET6cjs.AuthUIContext; exports.AuthUIProvider = _chunkEPB3TET6cjs.AuthUIProvider; exports.ChangeEmailCard = ChangeEmailCard; exports.ChangePasswordCard = ChangePasswordCard; exports.CreateOrganizationDialog = CreateOrganizationDialog; exports.DeleteAccountCard = DeleteAccountCard; exports.DeleteOrganizationCard = DeleteOrganizationCard; exports.DiscordIcon = DiscordIcon; exports.DropboxIcon = DropboxIcon; exports.EmailTemplate = _chunkJOLFGV3Ucjs.EmailTemplate; exports.FacebookIcon = FacebookIcon; exports.ForgotPasswordForm = ForgotPasswordForm; exports.GitHubIcon = GitHubIcon; exports.GitLabIcon = GitLabIcon; exports.GoogleIcon = GoogleIcon; exports.KickIcon = KickIcon; exports.LinkedInIcon = LinkedInIcon; exports.MagicLinkForm = MagicLinkForm; exports.MicrosoftIcon = MicrosoftIcon; exports.OrganizationInvitationsCard = OrganizationInvitationsCard; exports.OrganizationLogo = OrganizationLogo; exports.OrganizationLogoCard = OrganizationLogoCard; exports.OrganizationMembersCard = OrganizationMembersCard; exports.OrganizationNameCard = OrganizationNameCard; exports.OrganizationSettingsCards = OrganizationSettingsCards; exports.OrganizationSlugCard = OrganizationSlugCard; exports.OrganizationSwitcher = OrganizationSwitcher; exports.OrganizationView = OrganizationView; exports.OrganizationsCard = OrganizationsCard; exports.PasskeysCard = PasskeysCard; exports.PasswordInput = PasswordInput; exports.ProvidersCard = ProvidersCard; exports.RecoverAccountForm = RecoverAccountForm; exports.RedditIcon = RedditIcon; exports.RedirectToSignIn = RedirectToSignIn; exports.RedirectToSignUp = RedirectToSignUp; exports.ResetPasswordForm = ResetPasswordForm; exports.RobloxIcon = RobloxIcon; exports.SecuritySettingsCards = SecuritySettingsCards; exports.SessionsCard = SessionsCard; exports.SettingsCard = SettingsCard; exports.SettingsCards = SettingsCards; exports.SignInForm = SignInForm; exports.SignOut = SignOut; exports.SignUpForm = SignUpForm; exports.SignedIn = SignedIn; exports.SignedOut = SignedOut; exports.SpotifyIcon = SpotifyIcon; exports.TikTokIcon = TikTokIcon; exports.TwitchIcon = TwitchIcon; exports.TwoFactorCard = TwoFactorCard; exports.TwoFactorForm = TwoFactorForm; exports.UpdateAvatarCard = UpdateAvatarCard; exports.UpdateFieldCard = UpdateFieldCard; exports.UpdateNameCard = UpdateNameCard; exports.UpdateUsernameCard = UpdateUsernameCard; exports.UserAvatar = UserAvatar; exports.UserButton = UserButton; exports.UserView = UserView; exports.VKIcon = VKIcon; exports.XIcon = XIcon; exports.ZoomIcon = ZoomIcon; exports.authLocalization = _chunkEPB3TET6cjs.authLocalization; exports.authViewPaths = _chunkQB6CPTMTcjs.authViewPaths; exports.defaultComponents = _chunkEPB3TET6cjs.defaultComponents; exports.settingsViews = settingsViews; exports.socialProviders = socialProviders; exports.useAuthData = _chunkEPB3TET6cjs.useAuthData; exports.useAuthenticate = useAuthenticate;
+exports.APIKeysCard = APIKeysCard; exports.AcceptInvitationCard = AcceptInvitationCard; exports.AccountSettingsCards = AccountSettingsCards; exports.AccountsCard = AccountsCard; exports.AppleIcon = AppleIcon; exports.AuthCallback = AuthCallback; exports.AuthCard = AuthCard; exports.AuthForm = AuthForm; exports.AuthLoading = AuthLoading; exports.AuthUIContext = _chunkZE6BT3OYcjs.AuthUIContext; exports.AuthUIProvider = _chunkZE6BT3OYcjs.AuthUIProvider; exports.ChangeEmailCard = ChangeEmailCard; exports.ChangePasswordCard = ChangePasswordCard; exports.CreateOrganizationDialog = CreateOrganizationDialog; exports.DeleteAccountCard = DeleteAccountCard; exports.DeleteOrganizationCard = DeleteOrganizationCard; exports.DiscordIcon = DiscordIcon; exports.DropboxIcon = DropboxIcon; exports.EmailTemplate = _chunkJOLFGV3Ucjs.EmailTemplate; exports.FacebookIcon = FacebookIcon; exports.ForgotPasswordForm = ForgotPasswordForm; exports.GitHubIcon = GitHubIcon; exports.GitLabIcon = GitLabIcon; exports.GoogleIcon = GoogleIcon; exports.KickIcon = KickIcon; exports.LinkedInIcon = LinkedInIcon; exports.MagicLinkForm = MagicLinkForm; exports.MicrosoftIcon = MicrosoftIcon; exports.OrganizationInvitationsCard = OrganizationInvitationsCard; exports.OrganizationLogo = OrganizationLogo; exports.OrganizationLogoCard = OrganizationLogoCard; exports.OrganizationMembersCard = OrganizationMembersCard; exports.OrganizationNameCard = OrganizationNameCard; exports.OrganizationSettingsCards = OrganizationSettingsCards; exports.OrganizationSlugCard = OrganizationSlugCard; exports.OrganizationSwitcher = OrganizationSwitcher; exports.OrganizationView = OrganizationView; exports.OrganizationsCard = OrganizationsCard; exports.PasskeysCard = PasskeysCard; exports.PasswordInput = PasswordInput; exports.ProvidersCard = ProvidersCard; exports.RecoverAccountForm = RecoverAccountForm; exports.RedditIcon = RedditIcon; exports.RedirectToSignIn = RedirectToSignIn; exports.RedirectToSignUp = RedirectToSignUp; exports.ResetPasswordForm = ResetPasswordForm; exports.RobloxIcon = RobloxIcon; exports.SecuritySettingsCards = SecuritySettingsCards; exports.SessionsCard = SessionsCard; exports.SettingsCard = SettingsCard; exports.SettingsCards = SettingsCards; exports.SignInForm = SignInForm; exports.SignOut = SignOut; exports.SignUpForm = SignUpForm; exports.SignedIn = SignedIn; exports.SignedOut = SignedOut; exports.SpotifyIcon = SpotifyIcon; exports.TikTokIcon = TikTokIcon; exports.TwitchIcon = TwitchIcon; exports.TwoFactorCard = TwoFactorCard; exports.TwoFactorForm = TwoFactorForm; exports.UpdateAvatarCard = UpdateAvatarCard; exports.UpdateFieldCard = UpdateFieldCard; exports.UpdateNameCard = UpdateNameCard; exports.UpdateUsernameCard = UpdateUsernameCard; exports.UserAvatar = UserAvatar; exports.UserButton = UserButton; exports.UserView = UserView; exports.VKIcon = VKIcon; exports.XIcon = XIcon; exports.ZoomIcon = ZoomIcon; exports.authLocalization = _chunkZE6BT3OYcjs.authLocalization; exports.authViewPaths = _chunkQB6CPTMTcjs.authViewPaths; exports.defaultComponents = _chunkZE6BT3OYcjs.defaultComponents; exports.settingsViews = settingsViews; exports.socialProviders = socialProviders; exports.useAuthData = _chunkZE6BT3OYcjs.useAuthData; exports.useAuthenticate = useAuthenticate;

@@ -696,6 +696,174 @@ interface AdditionalFields {
     [key: string]: AdditionalField;
 }
 
+declare const alertVariants: (props?: ({
+    variant?: "default" | "destructive" | null | undefined;
+} & class_variance_authority_types.ClassProp) | undefined) => string;
+declare function Alert({ className, variant, ...props }: React$1.ComponentProps<"div"> & VariantProps<typeof alertVariants>): react_jsx_runtime.JSX.Element;
+declare function AlertTitle({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
+declare function AlertDescription({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
+
+declare function Checkbox({ className, ...props }: React$1.ComponentProps<typeof CheckboxPrimitive.Root>): react_jsx_runtime.JSX.Element;
+
+declare function Drawer({ ...props }: React$1.ComponentProps<typeof Drawer$1.Root>): react_jsx_runtime.JSX.Element;
+declare function DrawerTrigger({ ...props }: React$1.ComponentProps<typeof Drawer$1.Trigger>): react_jsx_runtime.JSX.Element;
+declare function DrawerPortal({ ...props }: React$1.ComponentProps<typeof Drawer$1.Portal>): react_jsx_runtime.JSX.Element;
+declare function DrawerClose({ ...props }: React$1.ComponentProps<typeof Drawer$1.Close>): react_jsx_runtime.JSX.Element;
+declare function DrawerOverlay({ className, ...props }: React$1.ComponentProps<typeof Drawer$1.Overlay>): react_jsx_runtime.JSX.Element;
+declare function DrawerContent({ className, children, ...props }: React$1.ComponentProps<typeof Drawer$1.Content>): react_jsx_runtime.JSX.Element;
+declare function DrawerHeader({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
+declare function DrawerFooter({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
+declare function DrawerTitle({ className, ...props }: React$1.ComponentProps<typeof Drawer$1.Title>): react_jsx_runtime.JSX.Element;
+declare function DrawerDescription({ className, ...props }: React$1.ComponentProps<typeof Drawer$1.Description>): react_jsx_runtime.JSX.Element;
+
+declare function DropdownMenu({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Root>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuPortal({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Portal>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuTrigger({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Trigger>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuContent({ className, sideOffset, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Content>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuGroup({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Group>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuItem({ className, inset, variant, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Item> & {
+    inset?: boolean;
+    variant?: "default" | "destructive";
+}): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuCheckboxItem({ className, children, checked, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.CheckboxItem>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuRadioGroup({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.RadioGroup>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuRadioItem({ className, children, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.RadioItem>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuLabel({ className, inset, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Label> & {
+    inset?: boolean;
+}): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuSeparator({ className, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Separator>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuShortcut({ className, ...props }: React$1.ComponentProps<"span">): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuSub({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Sub>): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuSubTrigger({ className, inset, children, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.SubTrigger> & {
+    inset?: boolean;
+}): react_jsx_runtime.JSX.Element;
+declare function DropdownMenuSubContent({ className, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.SubContent>): react_jsx_runtime.JSX.Element;
+
+declare function FormItem({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
+declare function FormLabel({ className, ...props }: React$1.ComponentProps<typeof LabelPrimitive.Root>): react_jsx_runtime.JSX.Element;
+declare function FormControl({ ...props }: React$1.ComponentProps<typeof Slot>): react_jsx_runtime.JSX.Element;
+declare function FormDescription({ className, ...props }: React$1.ComponentProps<"p">): react_jsx_runtime.JSX.Element;
+declare function FormMessage({ className, ...props }: React$1.ComponentProps<"p">): react_jsx_runtime.JSX.Element | null;
+
+declare function InputOTP({ className, containerClassName, ...props }: React$1.ComponentProps<typeof OTPInput> & {
+    containerClassName?: string;
+}): react_jsx_runtime.JSX.Element;
+declare function InputOTPGroup({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
+declare function InputOTPSlot({ index, className, ...props }: React$1.ComponentProps<"div"> & {
+    index: number;
+}): react_jsx_runtime.JSX.Element;
+declare function InputOTPSeparator({ ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
+
+declare function Label({ className, ...props }: React$1.ComponentProps<typeof LabelPrimitive.Root>): react_jsx_runtime.JSX.Element;
+
+declare function Select({ ...props }: React$1.ComponentProps<typeof SelectPrimitive.Root>): react_jsx_runtime.JSX.Element;
+declare function SelectGroup({ ...props }: React$1.ComponentProps<typeof SelectPrimitive.Group>): react_jsx_runtime.JSX.Element;
+declare function SelectValue({ ...props }: React$1.ComponentProps<typeof SelectPrimitive.Value>): react_jsx_runtime.JSX.Element;
+declare function SelectTrigger({ className, size, children, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Trigger> & {
+    size?: "sm" | "default";
+}): react_jsx_runtime.JSX.Element;
+declare function SelectContent({ className, children, position, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Content>): react_jsx_runtime.JSX.Element;
+declare function SelectLabel({ className, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Label>): react_jsx_runtime.JSX.Element;
+declare function SelectItem({ className, children, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Item>): react_jsx_runtime.JSX.Element;
+declare function SelectSeparator({ className, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Separator>): react_jsx_runtime.JSX.Element;
+declare function SelectScrollUpButton({ className, ...props }: React$1.ComponentProps<typeof SelectPrimitive.ScrollUpButton>): react_jsx_runtime.JSX.Element;
+declare function SelectScrollDownButton({ className, ...props }: React$1.ComponentProps<typeof SelectPrimitive.ScrollDownButton>): react_jsx_runtime.JSX.Element;
+
+declare function Separator({ className, orientation, decorative, ...props }: React$1.ComponentProps<typeof SeparatorPrimitive.Root>): react_jsx_runtime.JSX.Element;
+
+declare function Skeleton({ className, ...props }: React.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
+
+declare function Tabs({ className, ...props }: React$1.ComponentProps<typeof TabsPrimitive.Root>): react_jsx_runtime.JSX.Element;
+declare function TabsList({ className, ...props }: React$1.ComponentProps<typeof TabsPrimitive.List>): react_jsx_runtime.JSX.Element;
+declare function TabsTrigger({ className, ...props }: React$1.ComponentProps<typeof TabsPrimitive.Trigger>): react_jsx_runtime.JSX.Element;
+declare function TabsContent({ className, ...props }: React$1.ComponentProps<typeof TabsPrimitive.Content>): react_jsx_runtime.JSX.Element;
+
+declare const defaultComponents: {
+    readonly Avatar: typeof Avatar;
+    readonly AvatarFallback: typeof AvatarFallback;
+    readonly AvatarImage: typeof AvatarImage;
+    readonly Alert: typeof Alert;
+    readonly AlertDescription: typeof AlertDescription;
+    readonly AlertTitle: typeof AlertTitle;
+    readonly Button: typeof Button;
+    readonly Card: typeof Card;
+    readonly CardAction: typeof CardAction;
+    readonly CardContent: typeof CardContent;
+    readonly CardDescription: typeof CardDescription;
+    readonly CardFooter: typeof CardFooter;
+    readonly CardHeader: typeof CardHeader;
+    readonly CardTitle: typeof CardTitle;
+    readonly Checkbox: typeof Checkbox;
+    readonly Dialog: typeof Dialog;
+    readonly DialogClose: typeof DialogClose;
+    readonly DialogContent: typeof DialogContent;
+    readonly DialogDescription: typeof DialogDescription;
+    readonly DialogFooter: typeof DialogFooter;
+    readonly DialogHeader: typeof DialogHeader;
+    readonly DialogOverlay: typeof DialogOverlay;
+    readonly DialogPortal: typeof DialogPortal;
+    readonly DialogTitle: typeof DialogTitle;
+    readonly DialogTrigger: typeof DialogTrigger;
+    readonly Drawer: typeof Drawer;
+    readonly DrawerClose: typeof DrawerClose;
+    readonly DrawerContent: typeof DrawerContent;
+    readonly DrawerDescription: typeof DrawerDescription;
+    readonly DrawerFooter: typeof DrawerFooter;
+    readonly DrawerHeader: typeof DrawerHeader;
+    readonly DrawerOverlay: typeof DrawerOverlay;
+    readonly DrawerPortal: typeof DrawerPortal;
+    readonly DrawerTitle: typeof DrawerTitle;
+    readonly DrawerTrigger: typeof DrawerTrigger;
+    readonly DropdownMenu: typeof DropdownMenu;
+    readonly DropdownMenuCheckboxItem: typeof DropdownMenuCheckboxItem;
+    readonly DropdownMenuContent: typeof DropdownMenuContent;
+    readonly DropdownMenuGroup: typeof DropdownMenuGroup;
+    readonly DropdownMenuItem: typeof DropdownMenuItem;
+    readonly DropdownMenuLabel: typeof DropdownMenuLabel;
+    readonly DropdownMenuPortal: typeof DropdownMenuPortal;
+    readonly DropdownMenuRadioGroup: typeof DropdownMenuRadioGroup;
+    readonly DropdownMenuRadioItem: typeof DropdownMenuRadioItem;
+    readonly DropdownMenuSeparator: typeof DropdownMenuSeparator;
+    readonly DropdownMenuShortcut: typeof DropdownMenuShortcut;
+    readonly DropdownMenuSub: typeof DropdownMenuSub;
+    readonly DropdownMenuSubContent: typeof DropdownMenuSubContent;
+    readonly DropdownMenuSubTrigger: typeof DropdownMenuSubTrigger;
+    readonly DropdownMenuTrigger: typeof DropdownMenuTrigger;
+    readonly Form: <TFieldValues extends react_hook_form.FieldValues, TContext = any, TTransformedValues = TFieldValues>(props: react_hook_form.FormProviderProps<TFieldValues, TContext, TTransformedValues>) => React.JSX.Element;
+    readonly FormControl: typeof FormControl;
+    readonly FormDescription: typeof FormDescription;
+    readonly FormField: <TFieldValues extends react_hook_form.FieldValues = react_hook_form.FieldValues, TName extends react_hook_form.FieldPath<TFieldValues> = react_hook_form.FieldPath<TFieldValues>>({ ...props }: react_hook_form.ControllerProps<TFieldValues, TName>) => react_jsx_runtime.JSX.Element;
+    readonly FormItem: typeof FormItem;
+    readonly FormLabel: typeof FormLabel;
+    readonly FormMessage: typeof FormMessage;
+    readonly Input: typeof Input;
+    readonly InputOTP: typeof InputOTP;
+    readonly InputOTPGroup: typeof InputOTPGroup;
+    readonly InputOTPSeparator: typeof InputOTPSeparator;
+    readonly InputOTPSlot: typeof InputOTPSlot;
+    readonly Label: typeof Label;
+    readonly Select: typeof Select;
+    readonly SelectContent: typeof SelectContent;
+    readonly SelectGroup: typeof SelectGroup;
+    readonly SelectItem: typeof SelectItem;
+    readonly SelectLabel: typeof SelectLabel;
+    readonly SelectScrollDownButton: typeof SelectScrollDownButton;
+    readonly SelectScrollUpButton: typeof SelectScrollUpButton;
+    readonly SelectSeparator: typeof SelectSeparator;
+    readonly SelectTrigger: typeof SelectTrigger;
+    readonly SelectValue: typeof SelectValue;
+    readonly Separator: typeof Separator;
+    readonly Skeleton: typeof Skeleton;
+    readonly Tabs: typeof Tabs;
+    readonly TabsContent: typeof TabsContent;
+    readonly TabsList: typeof TabsList;
+    readonly TabsTrigger: typeof TabsTrigger;
+};
+type DefaultComponents = typeof defaultComponents;
+type Components = {
+    -readonly [K in keyof DefaultComponents]: DefaultComponents[K];
+};
+
 type AvatarOptions = {
     /**
      * Upload an avatar image and return the URL string
@@ -991,174 +1159,6 @@ type SocialOptions = {
     signIn?: (params: Parameters<AuthClient["signIn"]["social"]>[0]) => Promise<unknown>;
 };
 
-declare const alertVariants: (props?: ({
-    variant?: "default" | "destructive" | null | undefined;
-} & class_variance_authority_types.ClassProp) | undefined) => string;
-declare function Alert({ className, variant, ...props }: React$1.ComponentProps<"div"> & VariantProps<typeof alertVariants>): react_jsx_runtime.JSX.Element;
-declare function AlertTitle({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
-declare function AlertDescription({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
-
-declare function Checkbox({ className, ...props }: React$1.ComponentProps<typeof CheckboxPrimitive.Root>): react_jsx_runtime.JSX.Element;
-
-declare function Drawer({ ...props }: React$1.ComponentProps<typeof Drawer$1.Root>): react_jsx_runtime.JSX.Element;
-declare function DrawerTrigger({ ...props }: React$1.ComponentProps<typeof Drawer$1.Trigger>): react_jsx_runtime.JSX.Element;
-declare function DrawerPortal({ ...props }: React$1.ComponentProps<typeof Drawer$1.Portal>): react_jsx_runtime.JSX.Element;
-declare function DrawerClose({ ...props }: React$1.ComponentProps<typeof Drawer$1.Close>): react_jsx_runtime.JSX.Element;
-declare function DrawerOverlay({ className, ...props }: React$1.ComponentProps<typeof Drawer$1.Overlay>): react_jsx_runtime.JSX.Element;
-declare function DrawerContent({ className, children, ...props }: React$1.ComponentProps<typeof Drawer$1.Content>): react_jsx_runtime.JSX.Element;
-declare function DrawerHeader({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
-declare function DrawerFooter({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
-declare function DrawerTitle({ className, ...props }: React$1.ComponentProps<typeof Drawer$1.Title>): react_jsx_runtime.JSX.Element;
-declare function DrawerDescription({ className, ...props }: React$1.ComponentProps<typeof Drawer$1.Description>): react_jsx_runtime.JSX.Element;
-
-declare function DropdownMenu({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Root>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuPortal({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Portal>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuTrigger({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Trigger>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuContent({ className, sideOffset, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Content>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuGroup({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Group>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuItem({ className, inset, variant, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Item> & {
-    inset?: boolean;
-    variant?: "default" | "destructive";
-}): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuCheckboxItem({ className, children, checked, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.CheckboxItem>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuRadioGroup({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.RadioGroup>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuRadioItem({ className, children, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.RadioItem>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuLabel({ className, inset, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Label> & {
-    inset?: boolean;
-}): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuSeparator({ className, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Separator>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuShortcut({ className, ...props }: React$1.ComponentProps<"span">): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuSub({ ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.Sub>): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuSubTrigger({ className, inset, children, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.SubTrigger> & {
-    inset?: boolean;
-}): react_jsx_runtime.JSX.Element;
-declare function DropdownMenuSubContent({ className, ...props }: React$1.ComponentProps<typeof DropdownMenuPrimitive.SubContent>): react_jsx_runtime.JSX.Element;
-
-declare function FormItem({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
-declare function FormLabel({ className, ...props }: React$1.ComponentProps<typeof LabelPrimitive.Root>): react_jsx_runtime.JSX.Element;
-declare function FormControl({ ...props }: React$1.ComponentProps<typeof Slot>): react_jsx_runtime.JSX.Element;
-declare function FormDescription({ className, ...props }: React$1.ComponentProps<"p">): react_jsx_runtime.JSX.Element;
-declare function FormMessage({ className, ...props }: React$1.ComponentProps<"p">): react_jsx_runtime.JSX.Element | null;
-
-declare function InputOTP({ className, containerClassName, ...props }: React$1.ComponentProps<typeof OTPInput> & {
-    containerClassName?: string;
-}): react_jsx_runtime.JSX.Element;
-declare function InputOTPGroup({ className, ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
-declare function InputOTPSlot({ index, className, ...props }: React$1.ComponentProps<"div"> & {
-    index: number;
-}): react_jsx_runtime.JSX.Element;
-declare function InputOTPSeparator({ ...props }: React$1.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
-
-declare function Label({ className, ...props }: React$1.ComponentProps<typeof LabelPrimitive.Root>): react_jsx_runtime.JSX.Element;
-
-declare function Select({ ...props }: React$1.ComponentProps<typeof SelectPrimitive.Root>): react_jsx_runtime.JSX.Element;
-declare function SelectGroup({ ...props }: React$1.ComponentProps<typeof SelectPrimitive.Group>): react_jsx_runtime.JSX.Element;
-declare function SelectValue({ ...props }: React$1.ComponentProps<typeof SelectPrimitive.Value>): react_jsx_runtime.JSX.Element;
-declare function SelectTrigger({ className, size, children, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Trigger> & {
-    size?: "sm" | "default";
-}): react_jsx_runtime.JSX.Element;
-declare function SelectContent({ className, children, position, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Content>): react_jsx_runtime.JSX.Element;
-declare function SelectLabel({ className, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Label>): react_jsx_runtime.JSX.Element;
-declare function SelectItem({ className, children, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Item>): react_jsx_runtime.JSX.Element;
-declare function SelectSeparator({ className, ...props }: React$1.ComponentProps<typeof SelectPrimitive.Separator>): react_jsx_runtime.JSX.Element;
-declare function SelectScrollUpButton({ className, ...props }: React$1.ComponentProps<typeof SelectPrimitive.ScrollUpButton>): react_jsx_runtime.JSX.Element;
-declare function SelectScrollDownButton({ className, ...props }: React$1.ComponentProps<typeof SelectPrimitive.ScrollDownButton>): react_jsx_runtime.JSX.Element;
-
-declare function Separator({ className, orientation, decorative, ...props }: React$1.ComponentProps<typeof SeparatorPrimitive.Root>): react_jsx_runtime.JSX.Element;
-
-declare function Skeleton({ className, ...props }: React.ComponentProps<"div">): react_jsx_runtime.JSX.Element;
-
-declare function Tabs({ className, ...props }: React$1.ComponentProps<typeof TabsPrimitive.Root>): react_jsx_runtime.JSX.Element;
-declare function TabsList({ className, ...props }: React$1.ComponentProps<typeof TabsPrimitive.List>): react_jsx_runtime.JSX.Element;
-declare function TabsTrigger({ className, ...props }: React$1.ComponentProps<typeof TabsPrimitive.Trigger>): react_jsx_runtime.JSX.Element;
-declare function TabsContent({ className, ...props }: React$1.ComponentProps<typeof TabsPrimitive.Content>): react_jsx_runtime.JSX.Element;
-
-declare const defaultComponents: {
-    readonly Avatar: typeof Avatar;
-    readonly AvatarFallback: typeof AvatarFallback;
-    readonly AvatarImage: typeof AvatarImage;
-    readonly Alert: typeof Alert;
-    readonly AlertDescription: typeof AlertDescription;
-    readonly AlertTitle: typeof AlertTitle;
-    readonly Button: typeof Button;
-    readonly Card: typeof Card;
-    readonly CardAction: typeof CardAction;
-    readonly CardContent: typeof CardContent;
-    readonly CardDescription: typeof CardDescription;
-    readonly CardFooter: typeof CardFooter;
-    readonly CardHeader: typeof CardHeader;
-    readonly CardTitle: typeof CardTitle;
-    readonly Checkbox: typeof Checkbox;
-    readonly Dialog: typeof Dialog;
-    readonly DialogClose: typeof DialogClose;
-    readonly DialogContent: typeof DialogContent;
-    readonly DialogDescription: typeof DialogDescription;
-    readonly DialogFooter: typeof DialogFooter;
-    readonly DialogHeader: typeof DialogHeader;
-    readonly DialogOverlay: typeof DialogOverlay;
-    readonly DialogPortal: typeof DialogPortal;
-    readonly DialogTitle: typeof DialogTitle;
-    readonly DialogTrigger: typeof DialogTrigger;
-    readonly Drawer: typeof Drawer;
-    readonly DrawerClose: typeof DrawerClose;
-    readonly DrawerContent: typeof DrawerContent;
-    readonly DrawerDescription: typeof DrawerDescription;
-    readonly DrawerFooter: typeof DrawerFooter;
-    readonly DrawerHeader: typeof DrawerHeader;
-    readonly DrawerOverlay: typeof DrawerOverlay;
-    readonly DrawerPortal: typeof DrawerPortal;
-    readonly DrawerTitle: typeof DrawerTitle;
-    readonly DrawerTrigger: typeof DrawerTrigger;
-    readonly DropdownMenu: typeof DropdownMenu;
-    readonly DropdownMenuCheckboxItem: typeof DropdownMenuCheckboxItem;
-    readonly DropdownMenuContent: typeof DropdownMenuContent;
-    readonly DropdownMenuGroup: typeof DropdownMenuGroup;
-    readonly DropdownMenuItem: typeof DropdownMenuItem;
-    readonly DropdownMenuLabel: typeof DropdownMenuLabel;
-    readonly DropdownMenuPortal: typeof DropdownMenuPortal;
-    readonly DropdownMenuRadioGroup: typeof DropdownMenuRadioGroup;
-    readonly DropdownMenuRadioItem: typeof DropdownMenuRadioItem;
-    readonly DropdownMenuSeparator: typeof DropdownMenuSeparator;
-    readonly DropdownMenuShortcut: typeof DropdownMenuShortcut;
-    readonly DropdownMenuSub: typeof DropdownMenuSub;
-    readonly DropdownMenuSubContent: typeof DropdownMenuSubContent;
-    readonly DropdownMenuSubTrigger: typeof DropdownMenuSubTrigger;
-    readonly DropdownMenuTrigger: typeof DropdownMenuTrigger;
-    readonly Form: <TFieldValues extends react_hook_form.FieldValues, TContext = any, TTransformedValues = TFieldValues>(props: react_hook_form.FormProviderProps<TFieldValues, TContext, TTransformedValues>) => React.JSX.Element;
-    readonly FormControl: typeof FormControl;
-    readonly FormDescription: typeof FormDescription;
-    readonly FormField: <TFieldValues extends react_hook_form.FieldValues = react_hook_form.FieldValues, TName extends react_hook_form.FieldPath<TFieldValues> = react_hook_form.FieldPath<TFieldValues>>({ ...props }: react_hook_form.ControllerProps<TFieldValues, TName>) => react_jsx_runtime.JSX.Element;
-    readonly FormItem: typeof FormItem;
-    readonly FormLabel: typeof FormLabel;
-    readonly FormMessage: typeof FormMessage;
-    readonly Input: typeof Input;
-    readonly InputOTP: typeof InputOTP;
-    readonly InputOTPGroup: typeof InputOTPGroup;
-    readonly InputOTPSeparator: typeof InputOTPSeparator;
-    readonly InputOTPSlot: typeof InputOTPSlot;
-    readonly Label: typeof Label;
-    readonly Select: typeof Select;
-    readonly SelectContent: typeof SelectContent;
-    readonly SelectGroup: typeof SelectGroup;
-    readonly SelectItem: typeof SelectItem;
-    readonly SelectLabel: typeof SelectLabel;
-    readonly SelectScrollDownButton: typeof SelectScrollDownButton;
-    readonly SelectScrollUpButton: typeof SelectScrollUpButton;
-    readonly SelectSeparator: typeof SelectSeparator;
-    readonly SelectTrigger: typeof SelectTrigger;
-    readonly SelectValue: typeof SelectValue;
-    readonly Separator: typeof Separator;
-    readonly Skeleton: typeof Skeleton;
-    readonly Tabs: typeof Tabs;
-    readonly TabsContent: typeof TabsContent;
-    readonly TabsList: typeof TabsList;
-    readonly TabsTrigger: typeof TabsTrigger;
-};
-type DefaultComponents = typeof defaultComponents;
-type Components = {
-    -readonly [K in keyof DefaultComponents]: DefaultComponents[K];
-};
-
 declare const defaultNavigate: (href: string) => void;
 declare const defaultReplace: (href: string) => void;
 type AuthUIContextType = {
@@ -1447,4 +1447,4 @@ type AuthUIProviderProps = {
 declare const AuthUIContext: React$1.Context<AuthUIContextType>;
 declare const AuthUIProvider: ({ children, authClient: authClientProp, components: componentsProp, avatar: avatarProp, settings: settingsProp, settingsFields, settingsURL, avatarExtension, avatarSize, deleteUser: deleteUserProp, deleteAccountVerification, social: socialProp, genericOAuth: genericOAuthProp, providers, otherProviders, signInSocial, basePath, baseURL, captcha, redirectTo, credentials: credentialsProp, confirmPassword, forgotPassword, passwordValidation, rememberMe, username, changeEmail, freshAge, hooks: hooksProp, mutators: mutatorsProp, localization: localizationProp, nameRequired, organization: organizationProp, signUp: signUpProp, signUpFields, toast, viewPaths: viewPathsProp, navigate, replace, uploadAvatar, Link, ...props }: AuthUIProviderProps) => react_jsx_runtime.JSX.Element;
 
-export { type AuthUIProviderProps as A, Button as B, Card as C, Dialog as D, type FieldType as F, GitHubIcon as G, Input as I, KickIcon as K, LinkedInIcon as L, MicrosoftIcon as M, type PasswordValidation as P, RedditIcon as R, SpotifyIcon as S, TikTokIcon as T, VKIcon as V, XIcon as X, ZoomIcon as Z, type AuthLocalization as a, Avatar as b, type ProviderIconProps as c, type ProviderIcon as d, AppleIcon as e, DiscordIcon as f, DropboxIcon as g, FacebookIcon as h, GitLabIcon as i, GoogleIcon as j, RobloxIcon as k, TwitchIcon as l, authLocalization as m, type AuthUIContextType as n, AuthUIContext as o, AuthUIProvider as p, type Provider as q, defaultComponents as r, socialProviders as s, type Components as t };
+export { type AuthUIProviderProps as A, Button as B, Card as C, Dialog as D, type FieldType as F, GitHubIcon as G, Input as I, KickIcon as K, LinkedInIcon as L, MicrosoftIcon as M, type PasswordValidation as P, RedditIcon as R, SpotifyIcon as S, TikTokIcon as T, VKIcon as V, XIcon as X, ZoomIcon as Z, type AuthLocalization as a, Avatar as b, type ProviderIconProps as c, type ProviderIcon as d, AppleIcon as e, DiscordIcon as f, DropboxIcon as g, FacebookIcon as h, GitLabIcon as i, GoogleIcon as j, RobloxIcon as k, TwitchIcon as l, defaultComponents as m, type Components as n, authLocalization as o, type AuthUIContextType as p, AuthUIContext as q, AuthUIProvider as r, socialProviders as s, type Provider as t };

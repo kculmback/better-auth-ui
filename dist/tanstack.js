@@ -1,6 +1,6 @@
 import {
   AuthUIProvider
-} from "./chunk-BIIOZXX7.js";
+} from "./chunk-4EZOXMRU.js";
 import "./chunk-X44IQ7M2.js";
 
 // src/lib/tanstack/auth-ui-provider-tanstack.tsx

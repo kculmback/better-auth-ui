@@ -1,5 +1,5 @@
 import * as react_jsx_runtime from 'react/jsx-runtime';
-import { A as AuthUIProviderProps } from './auth-ui-provider-BrAd4hcX.cjs';
+import { A as AuthUIProviderProps } from './auth-ui-provider-CteODi-b.cjs';
 import 'react';
 import 'better-auth/social-providers';
 import './auth-hooks-DL8c3_Dy.cjs';
